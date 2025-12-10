@@ -1,6 +1,3 @@
-// discography.js
-// JS for displaying album previews on the Discography page
-
 const albums = {
   "READY TO BE": {
     release: "March 10, 2023",

@@ -108,12 +108,11 @@ main:not(:has(.sidebar)) {
     margin-bottom: 40px; 
 }
 
-/* Banner Styling (Homepage image) - **UPDATED WITH YOUR PROVIDED IMAGE URL** */
+/* Banner Styling (Homepage image) - **FINAL IMAGE LINK** */
 .banner {
     width: 100%;
     max-width: 700px; 
     height: 300px; 
-    /* YOUR PREFERRED IMAGE URL HERE */
     background: url('https://share.google/j6gs5R8k5shtrrJIK') no-repeat center center/cover;
     border-radius: 20px; 
     box-shadow: 0 10px 20px rgba(0,0,0,0.2); 

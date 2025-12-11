@@ -9,21 +9,11 @@ const albums = {
   }
 };
 
-function showAlbum(name) {
+function showAlbum(name){
   const album = albums[name];
-  if (!album) return;
-
-  let output = `
-    <h3>${name}</h3>
-    <p><strong>Release Date:</strong> ${album.release}</p>
-    <ul>
-  `;
-
-  album.tracks.forEach(track => {
-    output += `<li>${track}</li>`;
-  });
-
-  output += `</ul>`;
-
-  document.getElementById("albumInfo").innerHTML = output;
+  if(!album) return;
+  let output = `<h3>${name}</h3><p>Release: ${album.release}</p><ul>`;
+  album.tracks.forEach(track => output += `<li>${track}</li>`);
+  output += '</ul>';
+  document.getElementById('albumInfo').innerHTML = output;
 }

@@ -250,6 +250,19 @@ main:not(:has(.sidebar)) {
 /* ======================= */
 
 .discography-container {
+    /* Enforce the display property */
+    display: grid !important; 
+    
+    /* Ensure the two columns are created */
+    grid-template-columns: 1fr 1fr !important; 
+    
+    gap: 50px; 
+    padding: 40px;
+    max-width: 1200px;
+    margin: 40px auto; 
+}
+
+.discography-container {
     display: grid;
     grid-template-columns: 1fr 1fr; 
     gap: 50px; 

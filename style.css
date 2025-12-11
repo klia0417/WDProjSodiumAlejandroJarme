@@ -1,6 +1,4 @@
-/* ======================= */
-/* Global Styles     */
-/* ======================= */
+/* Global Styles*/
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -10,9 +8,7 @@ body {
     font-size: 1.1em; 
 }
 
-/* ======================= */
-/* Header           */
-/* ======================= */
+/*Header*/
 header {
     display: flex;
     justify-content: space-between;
@@ -68,9 +64,7 @@ header h1 {
     text-shadow: 1px 1px 3px rgba(255, 77, 109, 0.5);
 }
 
-/* ======================= */
-/* Main Layout       */
-/* ======================= */
+/*Main Layout*/
 main {
     display: flex;
     padding: 50px; 
@@ -96,12 +90,11 @@ main {
     margin-bottom: 40px; 
 }
 
-/* Banner Styling (The image section) */
+/* Banner Styling (The image section)*/
 .banner {
     width: 100%;
     max-width: 800px; 
     height: 400px; 
-    /* --- CRUCIAL FIX: Image path is now DIRECTLY INTO images/ (since CSS is in root) --- */
     background: url('images/twice-banner.png') no-repeat center center/cover;
     /* ----------------------------------------------------------------------------------- */
     border-radius: 20px; 
@@ -110,9 +103,7 @@ main {
     border-image: linear-gradient(45deg, #ff4d6d, #ff9933) 1;
 }
 
-/* ======================= */
-/* Sidebar          */
-/* ======================= */
+/*Sidebar*/
 .sidebar {
     flex: 1;
     display: flex;
@@ -143,9 +134,7 @@ main {
     box-shadow: 0 10px 20px rgba(0,0,0,0.35); 
 }
 
-/* ======================= */
-/* Footer          */
-/* ======================= */
+/*Footer*/
 footer {
     display: flex;
     justify-content: space-between;
@@ -156,21 +145,21 @@ footer {
     font-size: 1em; 
 }
 
-/* ======================= */
 /* About Page Specific Grid */
-/* ======================= */
+
+/* The main container for the three boxes */
 .about-grid-container {
     display: grid;
-    /* Define the grid structure: two equal columns */
+    /* Two columns: Left (1fr) and Right (1fr). You can adjust this for different sizes. */
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: auto auto; /* Two rows for the left column content */
     gap: 30px; /* Space between grid items */
     padding: 20px;
     max-width: 1200px;
-    margin: 0 auto; /* Center the grid */
+    margin: 40px auto; /* Center the grid and give it margin */
 }
 
-/* Specific styling for the Main Left Content box */
+/* Base styling for all three content boxes */
 .about-info-box {
     padding: 30px;
     border-radius: 15px;
@@ -180,21 +169,18 @@ footer {
 
 /* About TWICE Info Box (Top Left) */
 .about-info-box.main-info {
-    /* Spans the full height of the first row */
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 }
 
 /* Awards/Achievements Box (Bottom Left) */
 .about-info-box.awards-achievements {
-    /* Spans the full height of the second row */
     grid-column: 1 / 2;
     grid-row: 2 / 3;
 }
 
-/* Milestone Timeline Box (Right side) */
+/* Milestone Timeline Box (Right side) - Spans both rows */
 .about-info-box.timeline {
-    /* Spans both rows on the right column */
     grid-column: 2 / 3;
     grid-row: 1 / 3;
 }
@@ -202,10 +188,23 @@ footer {
 /* Grid Header Styling */
 .about-grid-container h2 {
     color: #880e4f; /* Deep pink color */
-    font-size: 2em; /* Smaller than main titles, but still large */
+    font-size: 2em; 
     margin-top: 0;
     padding-bottom: 10px;
     border-bottom: 3px solid #ffdfc7; /* Light pink separator */
+}
+
+/* Styling for the content lists inside the boxes */
+.about-info-box ul {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.about-info-box ul li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+    color: #333;
+    font-size: 0.9em; /* Slightly smaller text inside list for readability */
 }
 
 /* Responsive adjustment for the grid */
@@ -214,6 +213,7 @@ footer {
         /* On small screens, stack everything into one column */
         grid-template-columns: 1fr;
         grid-template-rows: auto; 
+        margin: 20px auto;
     }
     .about-info-box.timeline {
         /* Timeline box moves to the bottom */
@@ -222,7 +222,7 @@ footer {
     }
 }
 
-/* --- Responsive styles --- */
+/*Responsive styles*/
 @media (max-width: 900px) {
     main {
         flex-direction: column;

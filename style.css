@@ -97,17 +97,18 @@ main {
 }
 
 /* Banner Styling (Homepage image) */
-/* Outer wrapper for gradient border */
 .banner {
-    width: 200%;
-    max-width: 1000px;
-    height: 400px;
-    background-image: url('images/twice-banner.png'); /* <-- path must be exact */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    width: 100%;
+    max-width: 800px;  /* optional max width */
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    overflow: hidden;   /* ensures rounded corners apply to image */
+}
+
+.banner img {
+    width: 100%;
+    height: auto;       /* maintains aspect ratio */
+    display: block;
 }
 
 /* Sidebar (Homepage buttons) */

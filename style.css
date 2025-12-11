@@ -5,7 +5,6 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    /* Soft white/off-white background */
     background: #fffafa; 
     color: #333;
 }
@@ -18,7 +17,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
-    /* Soft pink/orange gradient for the header */
     background: linear-gradient(90deg, #ffc7d6, #ffdfc7); 
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
@@ -33,7 +31,7 @@ header {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #ff99cc, #ff4d6d); /* Stronger pink circle */
+    background: linear-gradient(135deg, #ff99cc, #ff4d6d); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,14 +42,13 @@ header {
 .logo-placeholder img {
     width: 40px;
     height: 40px;
-    /* This filter makes the logo image bright if it's a dark color */
     filter: brightness(2); 
     object-fit: contain;
 }
 
 header h1 {
     margin: 0;
-    color: #880e4f; /* Deep pink/maroon color for title */
+    color: #880e4f; 
     font-size: 2.5em;
     letter-spacing: 1px;
 }
@@ -59,18 +56,19 @@ header h1 {
 .header-nav a {
     margin-left: 25px;
     text-decoration: none;
-    color: #ff4d6d; /* Primary Pink for navigation */
+    color: #ff4d6d; 
     font-weight: bold;
     font-size: 1.1em;
     transition: all 0.3s ease;
 }
 
 .header-nav a:hover {
-    color: #ff9933; /* Orange on hover */
+    color: #ff9933; 
     text-shadow: 1px 1px 3px rgba(255, 77, 109, 0.5);
 }
 
 /* Styles for secondary pages headers (simpler header) */
+/* NOTE: The secondary HTML pages (in public/) will need their CSS link adjusted to '../style.css' */
 body > header:not(:has(.header-left)) {
     justify-content: space-around;
 }
@@ -86,7 +84,7 @@ main {
     display: flex;
     padding: 40px;
     gap: 40px;
-    min-height: calc(100vh - 180px); /* Adjust height for content */
+    min-height: calc(100vh - 180px); 
 }
 
 /* Styles for the "Welcome" text and Banner */
@@ -96,13 +94,13 @@ main {
 }
 
 .main-left h2 {
-    color: #880e4f; /* Deep pink for main heading */
+    color: #880e4f; 
     font-size: 2.5em;
     margin-bottom: 5px;
 }
 
 .main-left h3 {
-    color: #ff9933; /* Orange secondary heading */
+    color: #ff9933; 
     font-size: 1.5em;
     margin-bottom: 30px;
 }
@@ -112,12 +110,11 @@ main {
     width: 100%;
     max-width: 650px;
     height: 300px;
-    /* --- CRUCIAL: Set the image as a background --- */
-    background: url('../images/home.png') no-repeat center center/cover;
-    /* ----------------------------------------------- */
+    /* --- CRUCIAL FIX: Image path is now DIRECTLY INTO images/ --- */
+    background: url('images/home.png') no-repeat center center/cover;
+    /* ------------------------------------------------------------- */
     border-radius: 15px;
     box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-    /* Add a subtle gradient border matching the design */
     border: 5px solid transparent; 
     border-image: linear-gradient(45deg, #ff4d6d, #ff9933) 1;
 }
@@ -138,7 +135,6 @@ main {
     display: block;
     text-align: center;
     padding: 18px 10px;
-    /* Strong Orange/Pink Gradient for buttons */
     background: linear-gradient(135deg, #ff9933, #ff4d6d); 
     color: #fff;
     font-weight: bold;
@@ -151,7 +147,6 @@ main {
 }
 
 .sidebar-btn:hover {
-    /* Reverse the gradient and lift the button */
     background: linear-gradient(135deg, #ff4d6d, #ff9933); 
     transform: translateY(-3px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
@@ -164,14 +159,13 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 15px 40px;
-    /* Strong orange background */
     background: #ff9933; 
     color: #fff;
     font-weight: bold;
     font-size: 0.9em;
 }
 
-/* --- Added responsive styles for completeness --- */
+/* --- Responsive styles for completeness --- */
 @media (max-width: 900px) {
     main {
         flex-direction: column;

@@ -7,5 +7,5 @@ figure { text-align:center; }
 .members-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; }
 .member-card { background:white; padding:15px; border-radius:8px; box-shadow:0 0 5px #ccc; }
 table { width:100%; border-collapse:collapse; margin-top:20px; }
-th, td { padding:10px; border:1px solid #ccc; }
+th, td { padding:10px; border:1px solid #ccc; text-align:left; }
 footer { background:#eedfff; padding:20px; text-align:center; margin-top:20px; }

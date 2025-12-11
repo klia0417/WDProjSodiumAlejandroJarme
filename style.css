@@ -1,23 +1,25 @@
 /* ======================= */
-/*       Global Styles     */
+/* Global Styles     */
 /* ======================= */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(120deg, #fff9cc, #ffe0b3); /* yellow → orange */
+    /* Soft white/yellow background for the body */
+    background: #fffafa; 
     color: #333;
 }
 
 /* ======================= */
-/*        Header           */
+/* Header           */
 /* ======================= */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    background: linear-gradient(90deg, #ffb3b3, #ffcc66);
+    padding: 10px 40px;
+    /* Soft pink/orange gradient for the header */
+    background: linear-gradient(90deg, #ffc7d6, #ffdfc7); 
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
@@ -26,122 +28,116 @@ header {
     align-items: center;
 }
 
-header h1 {
-    margin-left: 10px;
-    color: #fff;
-    font-size: 2em;
-    text-shadow: 2px 2px 5px #ff9966;
+/* Logo Placeholder Styling */
+.logo-placeholder {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff99cc, #ff4d6d); /* Stronger pink circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    box-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
 }
 
-header .logo {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
+.logo-placeholder img {
+    width: 40px;
+    height: 40px;
+    /* The text "Once" on the logo is simulated with a light color */
+    filter: brightness(2); 
+    object-fit: contain;
+}
+
+header h1 {
+    margin: 0;
+    color: #880e4f; /* Deep pink/maroon color for title */
+    font-size: 2.5em;
+    letter-spacing: 1px;
 }
 
 .header-nav a {
     margin-left: 25px;
     text-decoration: none;
-    color: #ff4d6d;
+    color: #ff4d6d; /* Primary Pink for navigation */
     font-weight: bold;
+    font-size: 1.1em;
     transition: all 0.3s ease;
 }
 
 .header-nav a:hover {
-    color: #ff9933;
-    transform: scale(1.1);
+    color: #ff9933; /* Orange on hover */
+    text-shadow: 1px 1px 3px rgba(255, 77, 109, 0.5);
+}
+
+/* Styles for secondary pages headers */
+body > header:not(:has(.header-left)) {
+    justify-content: space-around;
+}
+
+body > header:not(:has(.header-left)) h1 {
+    font-size: 1.8em;
 }
 
 /* ======================= */
-/*       Main Layout       */
+/* Main Layout       */
 /* ======================= */
 main {
     display: flex;
     padding: 40px;
     gap: 40px;
+    min-height: calc(100vh - 180px); 
 }
 
+/* Styles for the "Welcome" text */
 .main-left {
     flex: 3;
-    text-align: center;
+    padding-top: 30px;
 }
 
 .main-left h2 {
-    color: #ff4d6d;
-    margin-bottom: 10px;
+    color: #880e4f; /* Deep pink for main heading */
+    font-size: 2.5em;
+    margin-bottom: 5px;
 }
 
 .main-left h3 {
-    color: #ff9933;
+    color: #ff9933; /* Orange secondary heading */
+    font-size: 1.5em;
     margin-bottom: 30px;
 }
 
+/* Banner Placeholder Styling (the image in the wireframe) */
 .banner {
     width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    max-width: 650px;
+    height: 300px;
+    /* Use a real background image for the live site */
+    background: url('../images/home.png') no-repeat center center/cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white; /* Text color if 'Banner' text is visible */
+    font-weight: bold;
+    /* Added subtle gradient border */
+    border: 5px solid transparent; 
+    border-image: linear-gradient(45deg, #ff4d6d, #ff9933) 1;
 }
 
 /* ======================= */
-/*        Sidebar          */
+/* Sidebar          */
 /* ======================= */
 .sidebar {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding-top: 30px;
+    max-width: 250px;
 }
 
 .sidebar-btn {
     display: block;
-    text-align: center;
-    padding: 15px;
-    background: #ffcc66;
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-
-.sidebar-btn:hover {
-    background: #ff4d6d;
-    transform: scale(1.05);
-}
-
-/* ======================= */
-/*         Footer          */
-/* ======================= */
-footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
-    background: #ff9933;
-    color: #fff;
-    font-weight: bold;
-}
-
-/* ======================= */
-/*       Responsive        */
-/* ======================= */
-@media (max-width: 900px) {
-    main {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .sidebar {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    header {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .header-nav a {
-        margin-left: 0;
-    }
-}

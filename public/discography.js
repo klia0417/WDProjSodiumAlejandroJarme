@@ -1,5 +1,6 @@
 const albums = {
-  "READY TO BE": { release: "March 10, 2023", tracks: ["SET ME FREE", "MOONLIGHT SUNRISE", "BLAME IT ON ME"] },
+  // Key modified to match capitalization in the HTML onclick events
+  "READY TO BE": { release: "March 10, 2023", tracks: ["SET ME FREE", "MOONLIGHT SUNRISE", "BLAME IT ON ME"] }, 
   "BETWEEN 1&2": { release: "August 26, 2022", tracks: ["Talk that Talk", "Queen of Hearts", "Basics"] }
 };
 

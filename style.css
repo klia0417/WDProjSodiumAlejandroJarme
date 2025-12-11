@@ -1,76 +1,465 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OnceVerse | Gallery</title>
-<link rel="stylesheet" href="../style.css"> 
-</head>
-<body>
-<header>
-    <div class="header-left">
-        <div class="logo-placeholder">
-            <img src="../images/logo.png" alt="Once">
-        </div>
-        <h1>OnceVerse</h1>
-    </div>
-    <nav class="header-nav">
-        <a href="../index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="members.html">Members</a>
-        <a href="discography.html">Discography</a>
-        <a href="gallery.html">Gallery</a>
-    </nav>
-</header>
+/* ======================= */
+/* Global Styles     */
+/* ======================= */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fffafa; 
+    color: #333;
+    font-size: 1.1em; 
+}
 
-<main>
-    <h1 style="text-align: center; color: #ff4d6d; font-size: 3.5em; margin-bottom: 20px; margin-top: 0;">Gallery</h1>
-    <h3 style="text-align: center; color: #ff9933; margin-bottom: 40px;">Beautiful Moments with TWICE</h3>
-    
-    <section class="gallery-grid-container">
-        
-        <div class="gallery-item">
-            <img src="../images/gallery.png" alt="TWICE Group Photo 1">
-        </div>
+/* ======================= */
+/* Header           */
+/* ======================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px; 
+    background: linear-gradient(90deg, #ffc7d6, #ffdfc7); 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
 
-        <div class="gallery-item">
-            <img src="../images/gallery.png" alt="TWICE Group Photo 2">
-        </div>
-        
-        <div class="gallery-item">
-            <img src="../images/gallery.png" alt="TWICE Group Photo 3">
-        </div>
-        
-        <div class="gallery-item">
-            <img src="../images/gallery.png" alt="TWICE Group Photo 4">
-        </div>
-        
-        <div class="gallery-item">
-            <img src="../images/gallery.png" alt="TWICE Group Photo 5">
-        </div>
-        
-        <div class="gallery-item">
-            <img src="../images/gallery.png" alt="TWICE Group Photo 6">
-        </div>
-        
-        <div class="gallery-item">
-            <img src="../images/gallery.png" alt="TWICE Group Photo 7">
-        </div>
-        
-        <div class="gallery-item">
-            <img src="../images/gallery.png" alt="TWICE Group Photo 8">
-        </div>
-        
-        <div class="gallery-item">
-            <img src="../images/gallery.png" alt="TWICE Group Photo 9">
-        </div>
+.header-left {
+    display: flex;
+    align-items: center;
+}
 
-    </section>
-</main>
+/* Logo Placeholder Styling - Increased size */
+.logo-placeholder {
+    width: 70px; 
+    height: 70px; 
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff99cc, #ff4d6d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px; 
+    box-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
+}
 
-<footer>
-    <p class="footer-left">© 2025 OnceVerse</p>
-    <p class="footer-right">Sources</p>
-</footer>
-</body>
-</html>
+.logo-placeholder img {
+    width: 50px; 
+    height: 50px; 
+    filter: brightness(2); 
+    object-fit: contain;
+}
+
+header h1 {
+    margin: 0;
+    color: #880e4f; 
+    font-size: 3em; 
+    letter-spacing: 1px;
+}
+
+.header-nav a {
+    margin-left: 30px; 
+    text-decoration: none;
+    color: #ff4d6d; 
+    font-weight: bold;
+    font-size: 1.2em; 
+    transition: all 0.3s ease;
+}
+
+.header-nav a:hover {
+    color: #ff9933; 
+    text-shadow: 1px 1px 3px rgba(255, 77, 109, 0.5);
+}
+
+/* ===================================== */
+/* Main Layout (General)                 */
+/* ===================================== */
+
+/* Default for main is flex (used by Home Page) */
+main {
+    display: flex; 
+    padding: 50px; 
+    gap: 50px; 
+    min-height: calc(100vh - 180px);
+}
+
+/* CRITICAL FIX: Secondary pages (About, Members, Discography, Gallery) use this block layout */
+main:not(:has(.sidebar)) {
+    display: block !important; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 50px;
+}
+
+/* ======================= */
+/* Homepage Specific Styles */
+/* ======================= */
+.main-left {
+    flex: 3;
+    padding-top: 40px; 
+}
+
+.main-left h2 {
+    color: #880e4f; 
+    font-size: 3.5em; 
+    margin-bottom: 8px; 
+}
+
+.main-left h3 {
+    color: #ff9933; 
+    font-size: 1.8em; 
+    margin-bottom: 40px; 
+}
+
+/* Banner Styling (Homepage image) - **UPDATED WITH YOUR PROVIDED IMAGE URL** */
+.banner {
+    width: 100%;
+    max-width: 700px; 
+    height: 300px; 
+    /* YOUR PREFERRED IMAGE URL HERE */
+    background: url('https://share.google/j6gs5R8k5shtrrJIK') no-repeat center center/cover;
+    border-radius: 20px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+    border: 7px solid transparent; 
+    border-image: linear-gradient(45deg, #ff4d6d, #ff9933) 1;
+}
+
+/* Sidebar (Homepage buttons) */
+.sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; 
+    padding-top: 40px; 
+    max-width: 300px; 
+}
+
+.sidebar-btn {
+    display: block;
+    text-align: center;
+    padding: 22px 15px; 
+    background: linear-gradient(135deg, #ff9933, #ff4d6d); 
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.4em; 
+    text-decoration: none;
+    border-radius: 20px; 
+    box-shadow: 0 8px 15px rgba(0,0,0,0.25); 
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.sidebar-btn:hover {
+    background: linear-gradient(135deg, #ff4d6d, #ff9933); 
+    transform: translateY(-4px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.35); 
+}
+
+/* ======================= */
+/* About Page Specific Grid */
+/* ======================= */
+
+.about-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto; 
+    gap: 30px; 
+    padding: 20px;
+    max-width: 1200px;
+    margin: 40px auto; 
+}
+
+.about-info-box {
+    padding: 30px;
+    border-radius: 15px;
+    background: #fff; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-info-box.main-info {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.about-info-box.awards-achievements {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.about-info-box.timeline {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+.about-grid-container h2 {
+    color: #880e4f; 
+    font-size: 2em; 
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ffdfc7; 
+}
+
+.about-info-box ul {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.about-info-box ul li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+    color: #333;
+    font-size: 0.9em; 
+}
+
+/* ======================= */
+/* Members Page Specific Grid */
+/* ======================= */
+
+.members-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px; 
+    padding: 40px;
+    max-width: 1200px;
+    margin: 40px auto; 
+    text-align: center;
+}
+
+.member-card {
+    padding: 20px;
+    border-radius: 15px;
+    background: #ffffff; 
+    box-shadow: 0 6px 15px rgba(255, 77, 109, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid #ffdfc7; 
+    min-height: 150px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 77, 109, 0.4);
+}
+
+.member-card h3 {
+    color: #880e4f; 
+    font-size: 1.8em;
+    margin: 10px 0 5px 0;
+}
+
+/* ======================= */
+/* Discography Page Specific Layout */
+/* ======================= */
+
+.discography-container {
+    display: grid !important; 
+    grid-template-columns: 1fr 1fr !important; 
+    gap: 50px; 
+    padding: 40px;
+    max-width: 1200px;
+    margin: 40px auto; 
+}
+
+.discography-box {
+    padding: 30px;
+    border-radius: 20px;
+    background: #ffffff; 
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15); 
+    border: 3px solid #ffdfc7; 
+}
+
+.discography-box h2 {
+    color: #880e4f; 
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ff9933; 
+    text-align: center;
+}
+
+/* Discography JS Button Styles */
+.album-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+.album-btn {
+    padding: 12px 20px;
+    border: 2px solid #ff4d6d; /* Pink border */
+    border-radius: 8px;
+    background: #fff;
+    color: #ff4d6d;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, transform 0.1s;
+}
+
+.album-btn:hover {
+    background: #ff4d6d;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.album-details-display {
+    padding: 15px;
+    background: #ffdfc7; /* Light orange background */
+    border-radius: 10px;
+    text-align: left;
+    min-height: 100px; /* Give it space */
+}
+
+.album-details-display h3 {
+    color: #880e4f;
+    border-bottom: 1px solid #ff9933;
+    padding-bottom: 5px;
+}
+
+.album-details-display ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+/* Discography general list styles */
+.discography-box ul {
+    list-style-type: none; 
+    padding-left: 0;
+    font-size: 1.1em;
+}
+
+.discography-box ul li {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-left: 5px solid #ff4d6d; 
+    background: #fffafa; 
+    border-radius: 5px;
+}
+
+.discography-box ul li strong {
+    color: #ff9933; 
+}
+
+/* ======================= */
+/* Gallery Page Specific Grid */
+/* ======================= */
+
+.gallery-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    padding: 40px;
+    max-width: 1200px;
+    margin: 20px auto 80px auto; 
+}
+
+.gallery-item {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.3); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid #ffdfc7;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 20px rgba(255, 77, 109, 0.6);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+
+/* ======================= */
+/* Footer          */
+/* ======================= */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px; 
+    background: #ff9933; 
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em; 
+}
+
+
+/* --- Responsive styles --- */
+@media (max-width: 1000px) {
+    /* For Homepage */
+    main {
+        flex-direction: column;
+        gap: 30px; 
+        padding: 30px;
+    }
+    .main-left h2 {
+        font-size: 2.5em; 
+    }
+    .main-left h3 {
+        font-size: 1.4em; 
+    }
+    .sidebar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 100%;
+        padding-top: 20px;
+    }
+    .sidebar-btn {
+        flex: 1 1 45%; 
+        margin: 5px;
+        font-size: 1.1em;
+        padding: 15px 10px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    /* For About Page */
+    .about-grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto; 
+        margin: 20px auto;
+    }
+    .about-info-box.timeline {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    }
+    /* For Members Page */
+    .members-grid-container {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+        padding: 30px;
+    }
+    /* For Gallery Page */
+    .gallery-grid-container {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+    }
+}
+
+@media (max-width: 800px) {
+    /* For Discography Page */
+    .discography-container {
+        grid-template-columns: 1fr !important; 
+        gap: 30px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* For Members and Gallery Pages on Phones */
+    .members-grid-container,
+    .gallery-grid-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px;
+    }
+}

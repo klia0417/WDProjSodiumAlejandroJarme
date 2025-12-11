@@ -98,17 +98,13 @@ main {
 
 /* Banner Styling (Homepage image) */
 .banner {
-    width: 100%;
-    max-width: 800px;
-    aspect-ratio: 16 / 5; /* Width / Height ratio matches your image */
     background-image: url('images/twice-banner.png');
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover; /* still fills container */
+    background-size: contain; /* instead of cover */
     border-radius: 20px;
     border: 7px solid transparent;
     border-image: linear-gradient(45deg, #ff4d6d, #ff9933) 1;
-
 }
 
 /* Sidebar (Homepage buttons) */

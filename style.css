@@ -108,16 +108,18 @@ main:not(:has(.sidebar)) {
     margin-bottom: 40px; 
 }
 
-/* Banner Styling (Homepage image) - FINAL IMAGE LINK */
 .banner {
-    width: 100%;
-    max-width: 700px; 
-    height: 300px; 
-    background: url('https://share.google/j6gs5R8k5shtrrJIK') no-repeat center center/cover;
-    border-radius: 20px; 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
-    border: 7px solid transparent; 
-    border-image: linear-gradient(45deg, #ff4d6d, #ff9933) 1;
+    width: 100%;          /* Container takes full available width */
+    max-width: none;      /* Remove any max-width limitation */
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;          /* Image stretches to full width */
+    height: auto;         /* Keeps aspect ratio */
+    display: block;
 }
 
 /* Sidebar (Homepage buttons) */

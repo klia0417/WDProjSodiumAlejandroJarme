@@ -99,15 +99,18 @@ main {
 /* Banner Styling (Homepage image) */
 .banner {
     width: 100%;
-    max-width: 800px;  /* optional max width */
+    max-width: 800px;     /* Keep it same as before */
+    height: 400px;        /* Fixed height */
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    overflow: hidden;   /* ensures rounded corners apply to image */
+    overflow: hidden;     /* Ensures rounded corners */
+    margin-bottom: 20px;
 }
 
 .banner img {
     width: 100%;
-    height: auto;       /* maintains aspect ratio */
+    height: 100%;
+    object-fit: contain;  /* Ensures the whole image fits without being cropped */
     display: block;
 }
 

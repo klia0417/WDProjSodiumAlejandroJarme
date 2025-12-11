@@ -7,8 +7,7 @@ body {
     padding: 0;
     background: #fffafa; 
     color: #333;
-    /* BASE FONT SIZE INCREASED FOR ALL TEXT */
-    font-size: 1.1em; /* Increased base font size from default 1em */
+    font-size: 1.1em; 
 }
 
 /* ======================= */
@@ -18,7 +17,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px; /* Increased padding */
+    padding: 15px 50px; 
     background: linear-gradient(90deg, #ffc7d6, #ffdfc7); 
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
@@ -30,20 +29,20 @@ header {
 
 /* Logo Placeholder Styling - Increased size */
 .logo-placeholder {
-    width: 70px; /* Increased */
-    height: 70px; /* Increased */
+    width: 70px; 
+    height: 70px; 
     border-radius: 50%;
     background: linear-gradient(135deg, #ff99cc, #ff4d6d);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 20px; /* Increased margin */
+    margin-right: 20px; 
     box-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
 }
 
 .logo-placeholder img {
-    width: 50px; /* Increased */
-    height: 50px; /* Increased */
+    width: 50px; 
+    height: 50px; 
     filter: brightness(2); 
     object-fit: contain;
 }
@@ -51,16 +50,16 @@ header {
 header h1 {
     margin: 0;
     color: #880e4f; 
-    font-size: 3em; /* Increased main title size */
+    font-size: 3em; 
     letter-spacing: 1px;
 }
 
 .header-nav a {
-    margin-left: 30px; /* Increased spacing */
+    margin-left: 30px; 
     text-decoration: none;
     color: #ff4d6d; 
     font-weight: bold;
-    font-size: 1.2em; /* Increased navigation text size */
+    font-size: 1.2em; 
     transition: all 0.3s ease;
 }
 
@@ -74,38 +73,40 @@ header h1 {
 /* ======================= */
 main {
     display: flex;
-    padding: 50px; /* Increased padding */
-    gap: 50px; /* Increased gap */
+    padding: 50px; 
+    gap: 50px; 
     min-height: calc(100vh - 180px);
 }
 
 /* Styles for the "Welcome" text and Banner */
 .main-left {
     flex: 3;
-    padding-top: 40px; /* Increased padding */
+    padding-top: 40px; 
 }
 
 .main-left h2 {
     color: #880e4f; 
-    font-size: 3.5em; /* Increased main heading size */
-    margin-bottom: 8px; /* Adjusted spacing */
+    font-size: 3.5em; 
+    margin-bottom: 8px; 
 }
 
 .main-left h3 {
     color: #ff9933; 
-    font-size: 1.8em; /* Increased secondary heading size */
-    margin-bottom: 40px; /* Increased spacing */
+    font-size: 1.8em; 
+    margin-bottom: 40px; 
 }
 
-/* Banner Styling (This is where the image goes) - Increased size */
+/* Banner Styling (The image section) */
 .banner {
     width: 100%;
-    max-width: 800px; /* Increased max width */
-    height: 400px; /* Increased height */
+    max-width: 800px; 
+    height: 400px; 
+    /* --- CRUCIAL FIX: Image path is now DIRECTLY INTO images/ (since CSS is in root) --- */
     background: url('images/home.png') no-repeat center center/cover;
-    border-radius: 20px; /* Larger border radius */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Stronger shadow */
-    border: 7px solid transparent; /* Thicker border */
+    /* ----------------------------------------------------------------------------------- */
+    border-radius: 20px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+    border: 7px solid transparent; 
     border-image: linear-gradient(45deg, #ff4d6d, #ff9933) 1;
 }
 
@@ -116,30 +117,30 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 25px; /* Increased spacing between buttons */
-    padding-top: 40px; /* Increased padding */
-    max-width: 300px; /* Increased max width */
+    gap: 25px; 
+    padding-top: 40px; 
+    max-width: 300px; 
 }
 
 .sidebar-btn {
     display: block;
     text-align: center;
-    padding: 22px 15px; /* Increased button padding/height */
+    padding: 22px 15px; 
     background: linear-gradient(135deg, #ff9933, #ff4d6d); 
     color: #fff;
     font-weight: bold;
-    font-size: 1.4em; /* Increased button text size */
+    font-size: 1.4em; 
     text-decoration: none;
-    border-radius: 20px; /* Larger border radius */
-    box-shadow: 0 8px 15px rgba(0,0,0,0.25); /* Stronger shadow */
+    border-radius: 20px; 
+    box-shadow: 0 8px 15px rgba(0,0,0,0.25); 
     transition: all 0.3s ease;
     border: none;
 }
 
 .sidebar-btn:hover {
     background: linear-gradient(135deg, #ff4d6d, #ff9933); 
-    transform: translateY(-4px); /* Slightly larger lift on hover */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.35); /* Stronger hover shadow */
+    transform: translateY(-4px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.35); 
 }
 
 /* ======================= */
@@ -148,11 +149,11 @@ main {
 footer {
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px; /* Increased padding */
+    padding: 20px 50px; 
     background: #ff9933; 
     color: #fff;
     font-weight: bold;
-    font-size: 1em; /* Adjusted footer text size */
+    font-size: 1em; 
 }
 
 /* --- Responsive styles --- */
@@ -163,10 +164,10 @@ footer {
         padding: 30px;
     }
     .main-left h2 {
-        font-size: 2.5em; /* Adjusted for mobile */
+        font-size: 2.5em; 
     }
     .main-left h3 {
-        font-size: 1.4em; /* Adjusted for mobile */
+        font-size: 1.4em; 
     }
     .sidebar {
         flex-direction: row;
@@ -181,5 +182,4 @@ footer {
         font-size: 1.1em;
         padding: 15px 10px;
     }
-    /* ... other responsive styles (kept from original) ... */
 }

@@ -108,12 +108,13 @@ main:not(:has(.sidebar)) {
     margin-bottom: 40px; 
 }
 
-/* Banner Styling (Homepage image) - ADJUSTED SIZE */
+/* Banner Styling (Homepage image) - **UPDATED WITH GOOGLE IMAGE URL** */
 .banner {
     width: 100%;
-    max-width: 700px; /* Reduced width */
-    height: 300px; /* Reduced height */
-    background: url('images/home.png') no-repeat center center/cover;
+    max-width: 700px; 
+    height: 300px; 
+    /* NEW TWICE IMAGE URL HERE */
+    background: url('http://googleusercontent.com/image_collection/image_retrieval/2681895825505689253_0') no-repeat center center/cover;
     border-radius: 20px; 
     box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
     border: 7px solid transparent; 

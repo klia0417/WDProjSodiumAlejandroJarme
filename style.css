@@ -1,68 +1,160 @@
-/* Global Styling */
+/*Global Styles*/
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: #faf9ff;
+    background: linear-gradient(120deg, #ffe6f2, #e6f0ff); /* soft pink to pastel blue */
+    color: #333;
 }
 
-/* Header + Navigation */
+/*Header*/
 header {
-    background: #d9c7ff;
+    background: linear-gradient(90deg, #ffb3d9, #b3c6ff); /* pink to soft blue gradient */
     padding: 20px;
     text-align: center;
+    border-bottom: 5px solid #ff99cc;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 1px 1px 2px #ff66b2;
+}
+
+/*Navigation*/
+nav {
+    margin-top: 10px;
 }
 
 nav a {
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
-    color: #4b0082;
+    color: #ff3399; /* candy pink */
+    transition: all 0.3s ease;
 }
 
-/* Main Content */
+nav a:hover {
+    color: #33ccff; /* pastel blue hover */
+    transform: scale(1.1);
+}
+
+/* ===== Main Content ===== */
 main {
-    padding: 20px;
+    padding: 30px 20px;
 }
 
+h2 {
+    color: #ff66b2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+/* ===== Figures & Images ===== */
 img {
     width: 100%;
     max-width: 600px;
-    border-radius: 8px;
+    border-radius: 20px;
+    border: 5px solid #ffe6f2;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
 figure {
     text-align: center;
+    margin: 30px 0;
 }
 
+figcaption {
+    font-style: italic;
+    color: #ff66b2;
+    margin-top: 10px;
+}
+
+/* ===== Members Grid ===== */
 .members-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .member-card {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px #ccc;
+    background: #fff0f5; /* pastel pink */
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Tables */
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+.member-card h3 {
+    color: #ff3399;
+    margin-bottom: 10px;
+}
+
+.member-card p {
+    font-size: 0.95em;
+    color: #666;
+}
+
+/* ===== Table Styles ===== */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background: #ffe6f2;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 th, td {
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 12px 15px;
+    border-bottom: 1px solid #ffb3d9;
+    text-align: left;
 }
 
+th {
+    background: #ff99cc;
+    color: #fff;
+}
+
+tr:hover {
+    background: #ffd6eb;
+}
+
+/* ===== Footer ===== */
 footer {
-    background: #eedfff;
-    padding: 20px;
+    background: #ffb3d9;
+    color: #fff;
+    padding: 25px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/*Responsive*/
+@media (max-width: 768px) {
+    .members-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
 }

@@ -100,7 +100,7 @@ main {
 /* Outer wrapper for gradient border */
 .banner {
     width: 200%;
-    max-width: 800px;
+    max-width: 1000px;
     height: 400px;
     background-image: url('images/twice-banner.png'); /* <-- path must be exact */
     background-repeat: no-repeat;

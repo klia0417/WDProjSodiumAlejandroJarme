@@ -215,6 +215,82 @@ main:not(:has(.sidebar)) {
 }
 
 /* ======================= */
+/* Members Page Specific Grid */
+/* ======================= */
+
+/* The main container for the 3x3 grid */
+.members-grid-container {
+    display: grid;
+    /* Three equal-width columns */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px; /* Space between grid items/boxes */
+    padding: 40px;
+    max-width: 1200px;
+    margin: 40px auto; /* Center the grid */
+    text-align: center;
+}
+
+/* Styling for each member's box */
+.member-card {
+    padding: 20px;
+    border-radius: 15px;
+    /* Use a light background or a subtle color from the scheme */
+    background: #ffffff; 
+    box-shadow: 0 6px 15px rgba(255, 77, 109, 0.2); /* Pink shadow for effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid #ffdfc7; /* Light orange/pink border */
+}
+
+/* Hover effect */
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 77, 109, 0.4);
+}
+
+.member-card h3 {
+    color: #880e4f; /* Deep pink color for names */
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+/* Styling for the member image placeholder */
+.member-image {
+    width: 100%;
+    /* Fixed aspect ratio for consistency */
+    aspect-ratio: 1 / 1; 
+    max-height: 200px; 
+    margin-bottom: 15px;
+    border-radius: 50%;
+    /* Temporary placeholder background */
+    background: linear-gradient(135deg, #ffc7d6, #ffdfc7); 
+    display: block;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive adjustment for the Members grid */
+@media (max-width: 900px) {
+    .members-grid-container {
+        /* Change to 2 columns on tablets/small screens */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .members-grid-container {
+        /* Change to 1 column on phones */
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px;
+    }
+    .member-image {
+        max-height: 150px;
+    }
+}
+
+/* ======================= */
 /* Footer          */
 /* ======================= */
 footer {

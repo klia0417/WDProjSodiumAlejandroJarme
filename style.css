@@ -3,53 +3,53 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(120deg, #ffe6f2, #e6f0ff); /* soft pink to pastel blue */
+    background: linear-gradient(120deg, #fff9cc, #ffe0b3); /* soft yellow to light orange */
     color: #333;
 }
 
 /*Header*/
 header {
-    background: linear-gradient(90deg, #ffb3d9, #b3c6ff); /* pink to soft blue gradient */
-    padding: 20px;
+    background: linear-gradient(90deg, #ffb3b3, #ffcc66); /* pink to orange */
+    padding: 25px;
     text-align: center;
-    border-bottom: 5px solid #ff99cc;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-bottom: 5px solid #ff9966;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 header h1 {
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    font-size: 2.5em;
+    font-size: 2.8em;
     color: #fff;
-    text-shadow: 1px 1px 2px #ff66b2;
+    text-shadow: 2px 2px 5px #ff9966;
 }
 
 /*Navigation*/
 nav {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 nav a {
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
-    color: #ff3399; /* candy pink */
+    color: #ff4d6d; /* bright pink */
     transition: all 0.3s ease;
 }
 
 nav a:hover {
-    color: #33ccff; /* pastel blue hover */
+    color: #ff9933; /* bright orange hover */
     transform: scale(1.1);
 }
 
-/* ===== Main Content ===== */
+/*Main Content*/
 main {
     padding: 30px 20px;
 }
 
 h2 {
-    color: #ff66b2;
+    color: #ff4d6d;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 p {
@@ -57,12 +57,12 @@ p {
     font-size: 1.1em;
 }
 
-/* ===== Figures & Images ===== */
+/*Figures & Images*/
 img {
     width: 100%;
     max-width: 600px;
     border-radius: 20px;
-    border: 5px solid #ffe6f2;
+    border: 5px solid #fff0b3; /* soft yellow border */
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
@@ -73,7 +73,7 @@ figure {
 
 figcaption {
     font-style: italic;
-    color: #ff66b2;
+    color: #ff6666; /* coral pink */
     margin-top: 10px;
 }
 
@@ -86,7 +86,7 @@ figcaption {
 }
 
 .member-card {
-    background: #fff0f5; /* pastel pink */
+    background: #fff0b3; /* soft yellow card */
     padding: 20px;
     border-radius: 25px;
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
@@ -99,13 +99,13 @@ figcaption {
 }
 
 .member-card h3 {
-    color: #ff3399;
+    color: #ff4d6d;
     margin-bottom: 10px;
 }
 
 .member-card p {
     font-size: 0.95em;
-    color: #666;
+    color: #555;
 }
 
 /* ===== Table Styles ===== */
@@ -113,29 +113,29 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    background: #ffe6f2;
+    background: #ffe0b3; /* soft orange */
     border-radius: 15px;
     overflow: hidden;
 }
 
 th, td {
     padding: 12px 15px;
-    border-bottom: 1px solid #ffb3d9;
+    border-bottom: 1px solid #ffcc66;
     text-align: left;
 }
 
 th {
-    background: #ff99cc;
+    background: #ff4d6d; /* bright pink header */
     color: #fff;
 }
 
 tr:hover {
-    background: #ffd6eb;
+    background: #ffd699; /* light orange hover */
 }
 
-/* ===== Footer ===== */
+/*Footer*/
 footer {
-    background: #ffb3d9;
+    background: #ff9933; /* bright orange */
     color: #fff;
     padding: 25px;
     text-align: center;

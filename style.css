@@ -1,4 +1,6 @@
-/* Global Styles*/
+/* ======================= */
+/* Global Styles     */
+/* ======================= */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -8,7 +10,9 @@ body {
     font-size: 1.1em; 
 }
 
-/*Header*/
+/* ======================= */
+/* Header           */
+/* ======================= */
 header {
     display: flex;
     justify-content: space-between;
@@ -64,9 +68,11 @@ header h1 {
     text-shadow: 1px 1px 3px rgba(255, 77, 109, 0.5);
 }
 
-/*Main Layout*/
+/* ======================= */
+/* Main Layout (Homepage)  */
+/* ======================= */
 main {
-    display: flex;
+    display: flex; /* Default is flex for the homepage two-column layout */
     padding: 50px; 
     gap: 50px; 
     min-height: calc(100vh - 180px);
@@ -90,20 +96,19 @@ main {
     margin-bottom: 40px; 
 }
 
-/* Banner Styling (The image section)*/
+/* Banner Styling (Homepage image) */
 .banner {
     width: 100%;
     max-width: 800px; 
     height: 400px; 
-    background: url('images/twice-banner.png') no-repeat center center/cover;
-    /* ----------------------------------------------------------------------------------- */
+    background: url('images/home.png') no-repeat center center/cover;
     border-radius: 20px; 
     box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
     border: 7px solid transparent; 
     border-image: linear-gradient(45deg, #ff4d6d, #ff9933) 1;
 }
 
-/*Sidebar*/
+/* Sidebar (Homepage buttons) */
 .sidebar {
     flex: 1;
     display: flex;
@@ -134,29 +139,31 @@ main {
     box-shadow: 0 10px 20px rgba(0,0,0,0.35); 
 }
 
-/*Footer*/
-footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px; 
-    background: #ff9933; 
-    color: #fff;
-    font-weight: bold;
-    font-size: 1em; 
+/* ===================================== */
+/* Secondary Page Styles (CRITICAL FIX)  */
+/* ===================================== */
+
+/* FIX: Forces secondary pages (like About) to be a centered block, NOT a flex container */
+main:not(:has(.sidebar)) {
+    display: block;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 50px;
 }
 
+/* ======================= */
 /* About Page Specific Grid */
+/* ======================= */
 
-/* The main container for the three boxes */
 .about-grid-container {
     display: grid;
-    /* Two columns: Left (1fr) and Right (1fr). You can adjust this for different sizes. */
+    /* Two columns: Left (1fr) and Right (1fr). */
     grid-template-columns: 1fr 1fr; 
-    grid-template-rows: auto auto; /* Two rows for the left column content */
-    gap: 30px; /* Space between grid items */
+    grid-template-rows: auto auto; 
+    gap: 30px; 
     padding: 20px;
     max-width: 1200px;
-    margin: 40px auto; /* Center the grid and give it margin */
+    margin: 40px auto; 
 }
 
 /* Base styling for all three content boxes */
@@ -187,11 +194,11 @@ footer {
 
 /* Grid Header Styling */
 .about-grid-container h2 {
-    color: #880e4f; /* Deep pink color */
+    color: #880e4f; 
     font-size: 2em; 
     margin-top: 0;
     padding-bottom: 10px;
-    border-bottom: 3px solid #ffdfc7; /* Light pink separator */
+    border-bottom: 3px solid #ffdfc7; 
 }
 
 /* Styling for the content lists inside the boxes */
@@ -204,25 +211,23 @@ footer {
     margin-bottom: 10px;
     line-height: 1.4;
     color: #333;
-    font-size: 0.9em; /* Slightly smaller text inside list for readability */
+    font-size: 0.9em; 
 }
 
-/* Responsive adjustment for the grid */
-@media (max-width: 900px) {
-    .about-grid-container {
-        /* On small screens, stack everything into one column */
-        grid-template-columns: 1fr;
-        grid-template-rows: auto; 
-        margin: 20px auto;
-    }
-    .about-info-box.timeline {
-        /* Timeline box moves to the bottom */
-        grid-row: 3 / 4;
-        grid-column: 1 / 2;
-    }
+/* ======================= */
+/* Footer          */
+/* ======================= */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px; 
+    background: #ff9933; 
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em; 
 }
 
-/*Responsive styles*/
+/* --- Responsive styles --- */
 @media (max-width: 900px) {
     main {
         flex-direction: column;
@@ -247,5 +252,14 @@ footer {
         margin: 5px;
         font-size: 1.1em;
         padding: 15px 10px;
+    }
+    .about-grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto; 
+        margin: 20px auto;
+    }
+    .about-info-box.timeline {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
     }
 }

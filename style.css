@@ -99,7 +99,7 @@ main {
 /* Banner Styling (Homepage image) */
 /* Outer wrapper for gradient border */
 .banner {
-    width: 100%;
+    width: 200%;
     max-width: 800px;
     height: 400px;
     background-image: url('images/twice-banner.png'); /* <-- path must be exact */

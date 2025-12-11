@@ -5,7 +5,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    /* Soft white/yellow background for the body */
+    /* Soft white/off-white background */
     background: #fffafa; 
     color: #333;
 }
@@ -44,7 +44,7 @@ header {
 .logo-placeholder img {
     width: 40px;
     height: 40px;
-    /* The text "Once" on the logo is simulated with a light color */
+    /* This filter makes the logo image bright if it's a dark color */
     filter: brightness(2); 
     object-fit: contain;
 }
@@ -70,7 +70,7 @@ header h1 {
     text-shadow: 1px 1px 3px rgba(255, 77, 109, 0.5);
 }
 
-/* Styles for secondary pages headers */
+/* Styles for secondary pages headers (simpler header) */
 body > header:not(:has(.header-left)) {
     justify-content: space-around;
 }
@@ -86,10 +86,10 @@ main {
     display: flex;
     padding: 40px;
     gap: 40px;
-    min-height: calc(100vh - 180px); 
+    min-height: calc(100vh - 180px); /* Adjust height for content */
 }
 
-/* Styles for the "Welcome" text */
+/* Styles for the "Welcome" text and Banner */
 .main-left {
     flex: 3;
     padding-top: 30px;
@@ -107,22 +107,17 @@ main {
     margin-bottom: 30px;
 }
 
-/* Banner Placeholder Styling (the image in the wireframe) */
+/* Banner Styling (This is where the image goes) */
 .banner {
     width: 100%;
     max-width: 650px;
     height: 300px;
-    /* Use a real background image for the live site */
+    /* --- CRUCIAL: Set the image as a background --- */
     background: url('../images/home.png') no-repeat center center/cover;
+    /* ----------------------------------------------- */
     border-radius: 15px;
     box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    color: white; /* Text color if 'Banner' text is visible */
-    font-weight: bold;
-    /* Added subtle gradient border */
+    /* Add a subtle gradient border matching the design */
     border: 5px solid transparent; 
     border-image: linear-gradient(45deg, #ff4d6d, #ff9933) 1;
 }
@@ -141,3 +136,72 @@ main {
 
 .sidebar-btn {
     display: block;
+    text-align: center;
+    padding: 18px 10px;
+    /* Strong Orange/Pink Gradient for buttons */
+    background: linear-gradient(135deg, #ff9933, #ff4d6d); 
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.sidebar-btn:hover {
+    /* Reverse the gradient and lift the button */
+    background: linear-gradient(135deg, #ff4d6d, #ff9933); 
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* ======================= */
+/* Footer          */
+/* ======================= */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    /* Strong orange background */
+    background: #ff9933; 
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* --- Added responsive styles for completeness --- */
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    .sidebar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 100%;
+    }
+    .sidebar-btn {
+        flex: 1 1 45%; 
+        margin: 5px;
+    }
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+    }
+    .header-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .header-nav a {
+        margin: 5px 10px;
+    }
+    .logo-placeholder {
+        margin-right: 0;
+    }
+}

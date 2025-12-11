@@ -98,26 +98,17 @@ main {
 
 /* Banner Styling (Homepage image) */
 /* Outer wrapper for gradient border */
-.banner-wrapper {
-    width: 100%;
-    max-width: 800px;
-    border-radius: 20px;
-    padding: 7px; /* thickness of border */
-    background: linear-gradient(45deg, #ff4d6d, #ff9933);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-/* Inner div for the image */
 .banner {
     width: 100%;
+    max-width: 800px;
     height: 400px;
-    border-radius: 13px; /* slightly smaller so it fits inside wrapper */
-    background-image: url('images/twice-banner.png');
+    background-image: url('images/twice-banner.png'); /* <-- path must be exact */
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
-
 
 /* Sidebar (Homepage buttons) */
 .sidebar {

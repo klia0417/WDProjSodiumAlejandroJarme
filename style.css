@@ -82,7 +82,7 @@ main {
 
 /* CRITICAL FIX: Secondary pages (About, Members, Discography) use this block layout */
 main:not(:has(.sidebar)) {
-    display: block !important; /* Use !important to override potential conflicts */
+    display: block !important; 
     max-width: 1200px; 
     margin: 0 auto; 
     padding: 50px;
@@ -108,11 +108,11 @@ main:not(:has(.sidebar)) {
     margin-bottom: 40px; 
 }
 
-/* Banner Styling (Homepage image) */
+/* Banner Styling (Homepage image) - ADJUSTED SIZE */
 .banner {
     width: 100%;
-    max-width: 800px; 
-    height: 400px; 
+    max-width: 700px; /* Reduced width */
+    height: 300px; /* Reduced height */
     background: url('images/home.png') no-repeat center center/cover;
     border-radius: 20px; 
     box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
@@ -250,8 +250,8 @@ main:not(:has(.sidebar)) {
 /* ======================= */
 
 .discography-container {
-    display: grid !important; /* CRITICAL FIX */
-    grid-template-columns: 1fr 1fr !important; /* CRITICAL FIX */
+    display: grid !important; 
+    grid-template-columns: 1fr 1fr !important; 
     gap: 50px; 
     padding: 40px;
     max-width: 1200px;
@@ -276,6 +276,52 @@ main:not(:has(.sidebar)) {
     text-align: center;
 }
 
+/* Discography JS Button Styles */
+.album-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+.album-btn {
+    padding: 12px 20px;
+    border: 2px solid #ff4d6d; /* Pink border */
+    border-radius: 8px;
+    background: #fff;
+    color: #ff4d6d;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, transform 0.1s;
+}
+
+.album-btn:hover {
+    background: #ff4d6d;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.album-details-display {
+    padding: 15px;
+    background: #ffdfc7; /* Light orange background */
+    border-radius: 10px;
+    text-align: left;
+    min-height: 100px; /* Give it space */
+}
+
+.album-details-display h3 {
+    color: #880e4f;
+    border-bottom: 1px solid #ff9933;
+    padding-bottom: 5px;
+}
+
+.album-details-display ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+/* Discography general list styles */
 .discography-box ul {
     list-style-type: none; 
     padding-left: 0;
@@ -361,7 +407,7 @@ footer {
 @media (max-width: 800px) {
     /* For Discography Page */
     .discography-container {
-        grid-template-columns: 1fr !important; /* CRITICAL FIX for small screens */
+        grid-template-columns: 1fr !important; 
         gap: 30px;
         padding: 20px;
     }

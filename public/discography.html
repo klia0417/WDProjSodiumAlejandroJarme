@@ -28,17 +28,18 @@
     
     <section class="discography-container">
         
-        <div class="discography-box">
+        <div class="discography-box album-list-box">
             <h2>Albums</h2>
-            <ul>
-                <li>**2015:** <strong>The Story Begins</strong> (Debut Mini Album)</li>
-                <li>**2016:** <strong>Page Two</strong> (Mini Album)</li>
-                <li>**2017:** <strong>Twicecoaster: Lane 2</strong> (Repackage Album)</li>
-                <li>**2017:** <strong>Signal</strong> (Mini Album)</li>
-                <li>**2018:** <strong>Summer Nights</strong> (Special Album)</li>
-                <li>**2020:** <strong>Eyes Wide Open</strong> (Full Studio Album)</li>
-                <li>**2021:** <strong>Formula of Love: O+T=<3</strong> (Full Studio Album)</li>
-            </ul>
+            <p>Click an album cover to see the tracklist.</p>
+            
+            <div class="album-buttons">
+                <button class="album-btn" onclick="showAlbum('READY TO BE')">READY TO BE</button>
+                <button class="album-btn" onclick="showAlbum('BETWEEN 1&2')">BETWEEN 1&2</button>
+                </div>
+            
+            <div id="albumInfo" class="album-details-display">
+                <p>Select an album for details...</p>
+            </div>
         </div>
         
         <div class="discography-box">
@@ -62,5 +63,7 @@
     <p class="footer-left">© 2025 OnceVerse</p>
     <p class="footer-right">Sources</p>
 </footer>
+
+<script src="./discography.js"></script> 
 </body>
 </html>

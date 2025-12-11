@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OnceVerse | Discography</title>
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
@@ -13,6 +13,7 @@
   <a href="../index.html">Home</a>
   <a href="about.html">About</a>
   <a href="members.html">Members</a>
+  <a href="discography.html">Discography</a>
   <a href="gallery.html">Gallery</a>
 </nav>
 </header>
@@ -20,17 +21,20 @@
 <main>
 <table>
   <tr><th>Album</th><th>Year</th><th>Title Track</th></tr>
-  <tr><td>The Story Begins</td><td>2015</td><td>Like Ooh-Ahh</td></tr>
-  <tr><td>Page Two</td><td>2016</td><td>Cheer Up</td></tr>
-  <tr><td>Twicecoaster: Lane 1</td><td>2016</td><td>TT</td></tr>
-  <tr><td>Fancy You</td><td>2019</td><td>Fancy</td></tr>
-  <tr><td>Feel Special</td><td>2019</td><td>Feel Special</td></tr>
-  <tr><td>Eyes Wide Open</td><td>2020</td><td>I Can’t Stop Me</td></tr>
+  <tr onclick="showAlbum('READY TO BE')"><td>Ready to Be</td><td>2023</td><td>Set Me Free</td></tr>
+  <tr onclick="showAlbum('BETWEEN 1&2')"><td>BETWEEN 1&2</td><td>2022</td><td>Talk that Talk</td></tr>
   <tr><td>Formula of Love</td><td>2021</td><td>Scientist</td></tr>
-  <tr><td>Ready to Be</td><td>2023</td><td>Set Me Free</td></tr>
+  <tr><td>Eyes Wide Open</td><td>2020</td><td>I Can’t Stop Me</td></tr>
+  <tr><td>Feel Special</td><td>2019</td><td>Feel Special</td></tr>
+  <tr><td>Fancy You</td><td>2019</td><td>Fancy</td></tr>
+  <tr><td>Twicecoaster: Lane 1</td><td>2016</td><td>TT</td></tr>
+  <tr><td>Page Two</td><td>2016</td><td>Cheer Up</td></tr>
+  <tr><td>The Story Begins</td><td>2015</td><td>Like Ooh-Ahh</td></tr>
 </table>
 
-<div id="albumInfo"></div>
+<div id="albumInfo">
+    <h3>Click an album row to see more details!</h3>
+</div>
 
 </main>
 

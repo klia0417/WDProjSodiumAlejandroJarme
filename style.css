@@ -80,7 +80,7 @@ main {
     min-height: calc(100vh - 180px);
 }
 
-/* CRITICAL FIX: Secondary pages (About, Members, Discography, Gallery) use this block layout */
+/* Secondary pages (About, Members, Discography, Gallery) use this block layout */
 main:not(:has(.sidebar)) {
     display: block !important; 
     max-width: 1200px; 
@@ -108,7 +108,7 @@ main:not(:has(.sidebar)) {
     margin-bottom: 40px; 
 }
 
-/* Banner Styling (Homepage image) - **FINAL IMAGE LINK** */
+/* Banner Styling (Homepage image) - FINAL IMAGE LINK */
 .banner {
     width: 100%;
     max-width: 700px; 

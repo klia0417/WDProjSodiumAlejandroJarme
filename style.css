@@ -102,7 +102,7 @@ main {
     max-width: 800px; 
     height: 400px; 
     /* --- CRUCIAL FIX: Image path is now DIRECTLY INTO images/ (since CSS is in root) --- */
-    background: url('images/home.png') no-repeat center center/cover;
+    background: url('images/twice-banner.png') no-repeat center center/cover;
     /* ----------------------------------------------------------------------------------- */
     border-radius: 20px; 
     box-shadow: 0 10px 20px rgba(0,0,0,0.2); 

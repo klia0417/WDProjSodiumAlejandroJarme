@@ -98,21 +98,19 @@ main {
 
 /* Banner Styling (Homepage image) */
 .banner {
-    width: 100%;
-    max-width: 800px;     /* Keep it same as before */
-    height: 400px;        /* Fixed height */
+    width: 100%;          /* Container takes full available width */
+    max-width: none;      /* Remove any max-width limitation */
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    overflow: hidden;     /* Ensures rounded corners */
-    margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;  /* Ensures the whole image fits without being cropped */
+    width: 100%;          /* Image stretches to full width */
+    height: auto;         /* Keeps aspect ratio */
     display: block;
 }
+
 
 /* Sidebar (Homepage buttons) */
 .sidebar {

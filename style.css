@@ -98,8 +98,17 @@ main {
 
 /* Banner Styling (Homepage image) */
 .banner {
-    aspect-ratio: 16 / 5; /* maintain proportional size */
-    height: auto;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    background-image: url('images/twice-banner.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 20px;
+    outline: 7px solid;
+    outline-color: #ff4d6d; /* or use gradient with pseudo-element */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 /* Sidebar (Homepage buttons) */

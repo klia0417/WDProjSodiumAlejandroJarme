@@ -275,6 +275,67 @@ main:not(:has(.sidebar)) {
     margin-right: auto;
 }
 
+/* ======================= */
+/* Discography Page Specific Layout */
+/* ======================= */
+
+.discography-container {
+    display: grid;
+    /* Two equal-width columns */
+    grid-template-columns: 1fr 1fr; 
+    gap: 50px; /* Space between the Album and Single boxes */
+    padding: 40px;
+    max-width: 1200px;
+    margin: 40px auto; 
+}
+
+/* Styling for the Albums and Singles boxes */
+.discography-box {
+    padding: 30px;
+    border-radius: 20px;
+    background: #ffffff; 
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    border: 3px solid #ffdfc7; /* Light orange/pink border */
+}
+
+.discography-box h2 {
+    color: #880e4f; /* Deep pink color for titles */
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ff9933; /* Orange separator */
+    text-align: center;
+}
+
+.discography-box ul {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0;
+    font-size: 1.1em;
+}
+
+.discography-box ul li {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-left: 5px solid #ff4d6d; /* Pink emphasis bar */
+    background: #fffafa; /* Light pink background for list items */
+    border-radius: 5px;
+}
+
+.discography-box ul li strong {
+    color: #ff9933; /* Orange for the album/single title */
+}
+
+/* Responsive adjustment for the Discography layout */
+@media (max-width: 800px) {
+    .discography-container {
+        /* Stack into one column on small screens */
+        grid-template-columns: 1fr; 
+        gap: 30px;
+        padding: 20px;
+    }
+}
+
 /* Responsive adjustment for the Members grid */
 @media (max-width: 900px) {
     .members-grid-container {

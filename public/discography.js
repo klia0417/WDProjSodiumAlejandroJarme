@@ -8,142 +8,142 @@ const albums = {
     "THE STORY BEGINS": {
         release: "October 20, 2015",
         tracks: [
-            "LIKE OOH-AHH (Title Track)",
-            "DO IT AGAIN",
-            "GOING CRAZY",
-            "TRUTH",
-            "CANDY BOY",
-            "LIKE A FOOL"
+            "Like OOH-AHH (Title Track)",
+            "Do It Again",
+            "Going Crazy",
+            "Truth",
+            "Candy Boy",
+            "Like a Fool"
         ]
     },
     "PAGE TWO": {
         release: "April 25, 2016",
         tracks: [
-            "CHEER UP (Title Track)",
-            "PRECIOUS LOVE",
-            "TOUCHDOWN",
-            "READY TO TALK",
-            "TUK TOK",
-            "WOOHOO",
-            "I'M GONNA BE A STAR"
+            "Cheer Up (Title Track)",
+            "Precious Love",
+            "Touchdown",
+            "Ready to Talk",
+            "Tuk Tok",
+            "Woohoo",
+            "I'm Gonna Be a Star"
         ]
     },
     "TWICECOASTER: LANE 1": {
         release: "October 24, 2016",
         tracks: [
             "TT (Title Track)",
-            "1 TO 10",
-            "PONYTAIL",
-            "JELLY JELLY",
-            "PIT-A-PAT",
-            "NEXT PAGE",
-            "ONE IN A MILLION"
+            "1 to 10",
+            "Ponytail",
+            "Jelly Jelly",
+            "Pit-A-Pat",
+            "Next Page",
+            "One in a Million"
         ]
     },
     // --- FULL ALBUMS ---
     "TWICETAGRAM": {
         release: "October 30, 2017",
         tracks: [
-            "LIKEY (Title Track)",
-            "TURTLE",
-            "MISSING YOU",
-            "WOW",
+            "Likey (Title Track)",
+            "Turtle",
+            "Missing You",
+            "Wow",
             "FFW",
-            "DING DONG",
-            "REWIND",
-            "LOOK AT ME",
-            "LOVE LINE",
-            "JALJAYO GOOD NIGHT",
-            "ONLY YOU",
+            "Ding Dong",
+            "Rewind",
+            "Look at Me",
+            "Love Line",
+            "Jaljayo Good Night",
+            "Only You",
             "24/7",
-            "GREASY"
+            "Greasy"
         ]
     },
     // --- MINI ALBUMS (EPs) ---
     "WHAT IS LOVE?": {
         release: "April 9, 2018",
         tracks: [
-            "WHAT IS LOVE? (Title Track)",
-            "SWEET TALKER",
-            "HO!",
-            "DEAREST MY LOVE",
-            "BE AS ONE (Korean ver.)"
+            "What Is Love? (Title Track)",
+            "Sweet Talker",
+            "Ho!",
+            "Dearest My Love",
+            "Be As One (Korean ver.)"
         ]
     },
     "SUMMER NIGHTS": {
         release: "July 9, 2018",
         tracks: [
-            "DANCE THE NIGHT AWAY (Title Track)",
-            "CHILLAX",
-            "SHOT THRU THE HEART",
-            "DUCKY",
-            "DEJA VU",
-            "SAY YES"
+            "Dance The Night Away (Title Track)",
+            "Chillax",
+            "Shot Thru The Heart",
+            "Ducky",
+            "Deja Vu",
+            "Say Yes"
         ]
     },
     "YES OR YES": {
         release: "November 5, 2018",
         tracks: [
-            "YES OR YES (Title Track)",
-            "SAY YOU LOVE ME",
+            "Yes or Yes (Title Track)",
+            "Say You Love Me",
             "LALALA",
-            "YOUNG & WILD",
-            "SUNSET",
-            "AFTER MOON",
+            "Young & Wild",
+            "Sunset",
+            "After Moon",
             "BDZ (Korean ver.)"
         ]
     },
     "FANCY YOU": {
         release: "April 22, 2019",
         tracks: [
-            "FANCY (Title Track)",
-            "STUCK IN MY HEAD",
-            "GIRLS LIKE US",
-            "HOT",
-            "TURN IT UP",
-            "STRAWBERRY"
+            "Fancy (Title Track)",
+            "Stuck in My Head",
+            "Girls Like Us",
+            "Hot",
+            "Turn It Up",
+            "Strawberry"
         ]
     },
     "MORE & MORE": {
         release: "June 1, 2020",
         tracks: [
-            "MORE & MORE (Title Track)",
-            "OXYGEN",
-            "FIREWORK",
-            "BEGINNING",
-            "DON'T CALL ME AGAIN",
-            "SWEET SUMMER DAY",
-            "SHADOW"
+            "More & More (Title Track)",
+            "Oxygen",
+            "Firework",
+            "Beginning",
+            "Don't Call Me Again",
+            "Sweet Summer Day",
+            "Shadow"
         ]
     },
     // --- FULL ALBUMS ---
     "EYES WIDE OPEN": {
         release: "October 26, 2020",
         tracks: [
-            "I CAN'T STOP ME (Title Track)",
-            "HELL IN HEAVEN",
-            "UP NO MORE",
-            "DO WHAT WE LIKE",
-            "BRING IT BACK",
-            "BELIEVER",
-            "QUEEN",
-            "GO HARD",
-            "SHOT CLOCK",
-            "HANDLE IT",
-            "DEPEND ON YOU",
-            "SAY SOMETHING",
-            "BEHIND THE MASK"
+            "I Can't Stop Me (Title Track)",
+            "Hell in Heaven",
+            "Up No More",
+            "Do What We Like",
+            "Bring It Back",
+            "Believer",
+            "Queen",
+            "Go Hard",
+            "Shot Clock",
+            "Handle It",
+            "Depend On You",
+            "Say Something",
+            "Behind The Mask"
         ]
     },
     // --- MINI ALBUMS (EPs) ---
     "TASTE OF LOVE": {
         release: "June 11, 2021",
         tracks: [
-            "ALCOHOL-FREE (Title Track)",
-            "FIRST TIME",
-            "SCANDAL",
-            "CONGRATULATIONS",
-            "BABY BLUE LOVE",
+            "Alcohol-Free (Title Track)",
+            "First Time",
+            "Scandal",
+            "Congratulations",
+            "Baby Blue Love",
             "SOS"
         ]
     },
@@ -151,22 +151,22 @@ const albums = {
     "FORMULA OF LOVE": { 
         release: "November 12, 2021", 
         tracks: [
-            "SCIENTIST (Title Track)", 
-            "MOONLIGHT", 
-            "ICON", 
-            "CRUEL", 
-            "REAL YOU", 
+            "Scientist (Title Track)", 
+            "Moonlight", 
+            "Icon", 
+            "Cruel", 
+            "Real You", 
             "F.I.L.A (Fall In Love Again)", 
-            "LAST WALTZ",
-            "ESPRESSO",
-            "REWIND",
-            "CACTUS",
-            "PUSH & PULL",
-            "HELLO",
+            "Last Waltz",
+            "Espresso",
+            "Rewind",
+            "Cactus",
+            "Push & Pull",
+            "Hello",
             "1, 3, 2",
-            "CANDY",
+            "Candy",
             "The Feels (Korean ver.)",
-            "SCIENTIST (R3HAB Remix)",
+            "Scientist (R3HAB Remix)",
         ] 
     },
     // --- MINI ALBUMS (EPs) ---
@@ -185,24 +185,24 @@ const albums = {
     "READY TO BE": { 
         release: "March 10, 2023", 
         tracks: [
-            "SET ME FREE (Title Track)", 
-            "MOONLIGHT SUNRISE", 
-            "BLAME IT ON ME", 
-            "WALLFLOWER", 
-            "CRAZY STUPID LOVE", 
-            "GOT THE THRILLS", 
-            "SET ME FREE (English Version)"
+            "Set Me Free (Title Track)", 
+            "Moonlight Sunrise", 
+            "Blame It On Me", 
+            "Wallflower", 
+            "Crazy Stupid Love", 
+            "Got The Thrills", 
+            "Set Me Free (English Version)"
         ] 
     },
     "WITH YOU-TH": {
         release: "February 23, 2024",
         tracks: [
-            "ONE SPARK (Title Track)",
-            "I GOT YOU",
-            "RUSH",
-            "NEW NEW",
-            "BLOOM",
-            "YOU GET ME"
+            "One Spark (Title Track)",
+            "I Got You",
+            "Rush",
+            "New New",
+            "Bloom",
+            "You Get Me"
         ]
     }
 };

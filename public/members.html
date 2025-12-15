@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OnceVerse | TWICE Members</title>
-<link rel="stylesheet" href="../style.css"> 
-<style>
 
+<link rel="stylesheet" href="../style.css"> 
+
+<style>
 .members-grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -25,7 +26,6 @@
         grid-template-columns: 1fr;
     }
 }
-
 
 .member-card {
     background: #fff;
@@ -50,7 +50,7 @@
     font-size: 0.9em;
     color: #444;
     transition: max-height 0.5s ease, padding 0.5s ease;
-    margin-top: 0;
+    padding: 0;
 }
 
 .member-info img {
@@ -59,20 +59,18 @@
     margin-bottom: 10px;
 }
 
-
 .member-card.active .member-info {
-    max-height: 1000px; 
-    margin-top: 15px;
-    padding-top: 10px;
+    max-height: 1200px;
+    padding-top: 15px;
 }
 </style>
 </head>
+
 <body>
+
 <header>
     <div class="header-left">
-        <div class="logo-placeholder">
-            <img src="../images/logo.png" alt="Once Logo">
-        </div>
+        <img src="../images/logo.png" alt="Once Logo">
         <h1>OnceVerse</h1>
     </div>
     <nav class="header-nav">
@@ -85,7 +83,7 @@
 </header>
 
 <main>
-    <h2 style="text-align: center; color: #880e4f; font-size: 3em; margin-bottom: 20px;">Meet the Members</h2>
+<h2 style="text-align:center;color:#880e4f;font-size:3em;">Meet the Members</h2>
     
     <section class="members-grid-container">
 
@@ -191,7 +189,6 @@
                 <p><strong>MBTI:</strong> ENFP</p>
                 <p><strong>Hobbies:</strong> Cooking, reading, playing piano</p>
                 <p><strong>Facts about Sana:</strong></p>
-                <p><strong>Fun Facts:</strong></p>
                 <ul>
                     <li>Born in Tennōji-ku, Osaka, Japan.</li> 
                     <li>Only child.</li>
@@ -364,15 +361,20 @@
 const memberCards = document.querySelectorAll('.member-card');
 
 memberCards.forEach(card => {
-    card.addEventListener('click', () => {
-        card.classList.toggle('active'); 
-        memberCards.forEach(otherCard => {
-            if (otherCard !== card) {
-                otherCard.classList.remove('active'); 
-            }
-        });
+    const toggle = () => {
+        memberCards.forEach(c => c !== card && c.classList.remove('active'));
+        card.classList.toggle('active');
+    };
+
+    card.addEventListener('click', toggle);
+    card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggle();
+        }
     });
 });
 </script>
+
 </body>
 </html>

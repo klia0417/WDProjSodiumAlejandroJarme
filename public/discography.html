@@ -7,10 +7,11 @@
 <link rel="stylesheet" href="../style.css"> 
 </head>
 <body>
+
 <header>
     <div class="header-left">
         <div class="logo-placeholder">
-            <img src="../images/logo.png" alt="Once">
+            <img src="../images/logo.png" alt="Once Logo">
         </div>
         <h1>OnceVerse</h1>
     </div>
@@ -24,66 +25,63 @@
 </header>
 
 <main>
-    <h1 style="text-align: center; color: #ff4d6d; font-size: 3.5em; margin-bottom: 0;">Discography</h1>
-    
+    <h1 style="text-align: center; color: #ff4d6d; font-size: 3.5em; margin-bottom: 20px;">TWICE Discography</h1>
+    <p style="text-align: center; font-size: 1.2em; margin-bottom: 50px;">
+        Explore TWICE's albums, EPs, and singles in chronological order. Click on each album to view tracklists and release details.
+    </p>
+
     <section class="discography-container">
-        
+
         <div class="discography-box album-list-box">
-            <h2>Albums (KOR)</h2>
-            <p>Click a major album or EP below to view its full tracklist and release details. (Ordered Chronologically)</p>
-            
-            <div class="album-buttons" style="flex-wrap: wrap;">
-                
-                <button class="album-btn" onclick="showAlbum('THE STORY BEGINS')">THE STORY BEGINS</button>
-                <button class="album-btn" onclick="showAlbum('PAGE TWO')">PAGE TWO</button>
-                <button class="album-btn" onclick="showAlbum('TWICECOASTER: LANE 1')">TWICECOASTER: LANE 1</button>
-                <button class="album-btn" onclick="showAlbum('TWICETAGRAM')">TWICETAGRAM</button>
-                
-                <button class="album-btn" onclick="showAlbum('WHAT IS LOVE?')">WHAT IS LOVE?</button>
-                <button class="album-btn" onclick="showAlbum('SUMMER NIGHTS')">SUMMER NIGHTS</button>
-                <button class="album-btn" onclick="showAlbum('YES OR YES')">YES OR YES</button>
-                <button class="album-btn" onclick="showAlbum('FANCY YOU')">FANCY YOU</button>
-
-                <button class="album-btn" onclick="showAlbum('MORE & MORE')">MORE & MORE</button>
-                <button class="album-btn" onclick="showAlbum('EYES WIDE OPEN')">EYES WIDE OPEN</button>
-                <button class="album-btn" onclick="showAlbum('TASTE OF LOVE')">TASTE OF LOVE</button>
-                <button class="album-btn" onclick="showAlbum('FORMULA OF LOVE')">FORMULA OF LOVE</button>
-                
-                <button class="album-btn" onclick="showAlbum('BETWEEN 1&2')">BETWEEN 1&2</button>
-                <button class="album-btn" onclick="showAlbum('READY TO BE')">READY TO BE</button>
-                <button class="album-btn" onclick="showAlbum('WITH YOU-TH')">WITH YOU-TH</button>
-
+            <h2>Albums & EPs (KOR)</h2>
+            <div class="album-buttons" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px;">
+                <button class="album-btn" onclick="showAlbum('THE STORY BEGINS')">THE STORY BEGINS (2015)</button>
+                <button class="album-btn" onclick="showAlbum('PAGE TWO')">PAGE TWO (2016)</button>
+                <button class="album-btn" onclick="showAlbum('TWICECOASTER: LANE 1')">TWICECOASTER: LANE 1 (2016)</button>
+                <button class="album-btn" onclick="showAlbum('TWICETAGRAM')">TWICETAGRAM (2017)</button>
+                <button class="album-btn" onclick="showAlbum('WHAT IS LOVE?')">WHAT IS LOVE? (2018)</button>
+                <button class="album-btn" onclick="showAlbum('SUMMER NIGHTS')">SUMMER NIGHTS (2018)</button>
+                <button class="album-btn" onclick="showAlbum('YES OR YES')">YES OR YES (2018)</button>
+                <button class="album-btn" onclick="showAlbum('FANCY YOU')">FANCY YOU (2019)</button>
+                <button class="album-btn" onclick="showAlbum('MORE & MORE')">MORE & MORE (2020)</button>
+                <button class="album-btn" onclick="showAlbum('EYES WIDE OPEN')">EYES WIDE OPEN (2020)</button>
+                <button class="album-btn" onclick="showAlbum('TASTE OF LOVE')">TASTE OF LOVE (2021)</button>
+                <button class="album-btn" onclick="showAlbum('FORMULA OF LOVE')">FORMULA OF LOVE (2021)</button>
+                <button class="album-btn" onclick="showAlbum('BETWEEN 1&2')">BETWEEN 1&2 (2022)</button>
+                <button class="album-btn" onclick="showAlbum('READY TO BE')">READY TO BE (2023)</button>
+                <button class="album-btn" onclick="showAlbum('WITH YOU-TH')">WITH YOU-TH (2024)</button>
             </div>
-            
-            <div id="albumInfo" class="album-details-display">
-                <p>Select an album for details...</p>
+
+            <div id="albumInfo" class="album-details-display" style="margin-top: 30px; padding: 20px; border-radius: 15px; background-color: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <p>Select an album above to view details...</p>
             </div>
         </div>
-        
-        <div class="discography-box">
-            <h2>Singles</h2>
-            <p>Key singles and title tracks from repackages or specialized releases.</p>
-            <ul>
-                <li>**2018:** <strong>Heart Shaker</strong> (Merry & Happy Repackage)</li>
-                <li>**2017:** <strong>Knock Knock</strong> (Twicecoaster: Lane 2 Repackage)</li>
-                <li>**2018:** <strong>Yes or Yes</strong></li>
-                <li>**2019:** <strong>Feel Special</strong></li>
-                <li>**2020:** <strong>More & More</strong></li>
-                <li>**2021:** <strong>The Feels</strong> (First English Single)</li>
-                <li>**2022:** <strong>Talk that Talk</strong></li>
-                <li>**2023:** <strong>Set Me Free</strong></li>
-                <li>**2024:** <strong>One Spark</strong></li>
+
+        <div class="discography-box" style="margin-top: 50px;">
+            <h2>Singles & Title Tracks</h2>
+            <p>Major singles and tracks from repackages or special releases:</p>
+            <ul style="margin-top: 15px; line-height: 1.6;">
+                <li><strong>2017:</strong> Knock Knock (TWICECOASTER: Lane 2 Repackage)</li>
+                <li><strong>2018:</strong> Heart Shaker (Merry & Happy Repackage)</li>
+                <li><strong>2018:</strong> Yes or Yes</li>
+                <li><strong>2019:</strong> Feel Special</li>
+                <li><strong>2020:</strong> More & More</li>
+                <li><strong>2021:</strong> The Feels (First English Single)</li>
+                <li><strong>2022:</strong> Talk That Talk</li>
+                <li><strong>2023:</strong> Set Me Free</li>
+                <li><strong>2024:</strong> One Spark</li>
+                <li><strong>2025:</strong> Glow Up</li>
             </ul>
         </div>
-        
+
     </section>
 </main>
 
 <footer>
     <p class="footer-left">© 2025 OnceVerse</p>
-    <p class="footer-right">Sources</p>
+    <p class="footer-right">All rights reserved to JYP Entertainment.</p>
 </footer>
 
-<script src="./discography.js"></script> 
+<script src="./discography.js"></script>
 </body>
 </html>

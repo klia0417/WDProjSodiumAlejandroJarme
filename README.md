@@ -1,7 +1,7 @@
 # 💫 OnceVerse
 ### "Your ultimate guide to TWICE"
 
-![OnceVerse Logo](images/logo.png)
+![OnceVerse Logo](images/logo1.png)
 
 ---
 

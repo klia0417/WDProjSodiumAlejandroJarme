@@ -27,10 +27,9 @@ header {
     align-items: center;
 }
 
-/* Logo Placeholder Styling - Increased size */
 .logo-placeholder {
-    width: 70px; 
-    height: 70px; 
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background: linear-gradient(135deg, #ff99cc, #ff4d6d);
     display: flex;
@@ -41,9 +40,9 @@ header {
 }
 
 .logo-placeholder img {
-    width: 50px; 
-    height: 50px; 
-    filter: brightness(2); 
+    width: 70px;
+    height: 70px;
+    filter: brightness(2);
     object-fit: contain;
 }
 

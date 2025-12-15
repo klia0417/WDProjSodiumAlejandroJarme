@@ -45,7 +45,7 @@ const albums = {
             "TT (Remix)"
         ]
     },
-    "SIGNAL": { // Added
+    "SIGNAL": { 
         release: "May 15, 2017",
         tracks: [
             "SIGNAL (Title Track)",

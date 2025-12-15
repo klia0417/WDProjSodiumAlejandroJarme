@@ -1,10 +1,5 @@
-/**
- * discography.js
- * Handles dynamic content display for album tracklists, ordered chronologically.
- */
-
 const albums = {
-    // --- MINI ALBUMS (EPs) ---
+
     "THE STORY BEGINS": {
         release: "October 20, 2015",
         tracks: [
@@ -40,7 +35,27 @@ const albums = {
             "One in a Million"
         ]
     },
-    // --- FULL ALBUMS ---
+    "TWICECOASTER: LANE 2": { 
+        release: "February 20, 2017",
+        tracks: [
+            "Knock Knock (Title Track)",
+            "Ice Cream",
+            "Someone Like Me",
+            "Going Crazy",
+            "TT (Remix)"
+        ]
+    },
+    "SIGNAL": { // Added
+        release: "May 15, 2017",
+        tracks: [
+            "SIGNAL (Title Track)",
+            "Only You",
+            "Hold Me Tight",
+            "Eye Eye Eyes",
+            "Someone Like Me",
+            "21:29"
+        ]
+    },
     "TWICETAGRAM": {
         release: "October 30, 2017",
         tracks: [
@@ -59,7 +74,6 @@ const albums = {
             "Greasy"
         ]
     },
-    // --- MINI ALBUMS (EPs) ---
     "WHAT IS LOVE?": {
         release: "April 9, 2018",
         tracks: [
@@ -116,7 +130,6 @@ const albums = {
             "Shadow"
         ]
     },
-    // --- FULL ALBUMS ---
     "EYES WIDE OPEN": {
         release: "October 26, 2020",
         tracks: [
@@ -135,7 +148,6 @@ const albums = {
             "Behind The Mask"
         ]
     },
-    // --- MINI ALBUMS (EPs) ---
     "TASTE OF LOVE": {
         release: "June 11, 2021",
         tracks: [
@@ -147,7 +159,6 @@ const albums = {
             "SOS"
         ]
     },
-    // --- FULL ALBUMS ---
     "FORMULA OF LOVE": { 
         release: "November 12, 2021", 
         tracks: [
@@ -166,10 +177,9 @@ const albums = {
             "1, 3, 2",
             "Candy",
             "The Feels (Korean ver.)",
-            "Scientist (R3HAB Remix)",
+            "Scientist (R3HAB Remix)"
         ] 
     },
-    // --- MINI ALBUMS (EPs) ---
     "BETWEEN 1&2": { 
         release: "August 26, 2022", 
         tracks: [
@@ -204,6 +214,27 @@ const albums = {
             "Bloom",
             "You Get Me"
         ]
+    },
+    "THIS IS FOR": { 
+        release: "March 15, 2025", 
+        tracks: [
+            "This Is For (Title Track)",
+            "Me+You",
+            "Shining",
+            "Together",
+            "Forever"
+        ]
+    },
+    "TEN: THE STORY GOES ON": { 
+        release: "October 20, 2025", 
+        tracks: [
+            "Ten (Title Track)",
+            "Heartbeat",
+            "Runaway",
+            "Glow Up",
+            "Euphoria",
+            "Replay"
+        ]
     }
 };
 
@@ -226,14 +257,10 @@ function showAlbum(name){
     });
     
     output += `</ul>`;
-
     document.getElementById('albumInfo').innerHTML = output;
 }
 
-// Automatically display the first (oldest) album on page load
 document.addEventListener('DOMContentLoaded', () => {
     const firstAlbumName = Object.keys(albums)[0];
-    if (firstAlbumName) {
-        showAlbum(firstAlbumName);
-    }
+    if (firstAlbumName) showAlbum(firstAlbumName);
 });

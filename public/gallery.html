@@ -5,8 +5,65 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OnceVerse | Gallery</title>
 <link rel="stylesheet" href="../style.css"> 
+
+<style>
+
+.gallery-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+</style>
 </head>
+
 <body>
+
 <header>
     <div class="header-left">
         <div class="logo-placeholder">
@@ -28,43 +85,15 @@
     <h3 style="text-align: center; color: #ff9933; margin-bottom: 40px;">Beautiful Moments with TWICE</h3>
     
     <section class="gallery-grid-container">
-        
-        <div class="gallery-item">
-            <img src="../images/group1.png" alt="TWICE Group Photo 1">
-        </div>
-
-        <div class="gallery-item">
-            <img src="../images/group2.png" alt="TWICE Group Photo 2">
-        </div>
-        
-        <div class="gallery-item">
-            <img src="../images/group3.png" alt="TWICE Group Photo 3">
-        </div>
-        
-        <div class="gallery-item">
-            <img src="../images/group4.png" alt="TWICE Group Photo 4">
-        </div>
-        
-        <div class="gallery-item">
-            <img src="../images/group5.png" alt="TWICE Group Photo 5">
-        </div>
-        
-        <div class="gallery-item">
-            <img src="../images/group6.png" alt="TWICE Group Photo 6">
-        </div>
-        
-        <div class="gallery-item">
-            <img src="../images/group7.png" alt="TWICE Group Photo 7">
-        </div>
-        
-        <div class="gallery-item">
-            <img src="../images/group8.png" alt="TWICE Group Photo 8">
-        </div>
-        
-        <div class="gallery-item">
-            <img src="../images/group9.png" alt="TWICE Group Photo 9">
-        </div>
-
+        <div class="gallery-item"><img src="../images/group1.png" alt="TWICE Group Photo 1"></div>
+        <div class="gallery-item"><img src="../images/group2.png" alt="TWICE Group Photo 2"></div>
+        <div class="gallery-item"><img src="../images/group3.png" alt="TWICE Group Photo 3"></div>
+        <div class="gallery-item"><img src="../images/group4.png" alt="TWICE Group Photo 4"></div>
+        <div class="gallery-item"><img src="../images/group5.png" alt="TWICE Group Photo 5"></div>
+        <div class="gallery-item"><img src="../images/group6.png" alt="TWICE Group Photo 6"></div>
+        <div class="gallery-item"><img src="../images/group7.png" alt="TWICE Group Photo 7"></div>
+        <div class="gallery-item"><img src="../images/group8.png" alt="TWICE Group Photo 8"></div>
+        <div class="gallery-item"><img src="../images/group9.png" alt="TWICE Group Photo 9"></div>
     </section>
 </main>
 
@@ -72,5 +101,35 @@
     <p class="footer-left">© 2025 OnceVerse</p>
     <p class="footer-right">All rights reserved to JYP Entertainment.</p>
 </footer>
+
+<div class="lightbox" id="lightbox">
+    <img src="" alt="Expanded Image">
+</div>
+
+<script>
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+const galleryImages = document.querySelectorAll('.gallery-item img');
+
+galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+    });
+});
+
+lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+});
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+        lightbox.classList.remove('active');
+    }
+});
+</script>
+
 </body>
+</html>
+
 </html>

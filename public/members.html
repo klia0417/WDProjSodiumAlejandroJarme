@@ -5,12 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OnceVerse | TWICE Members</title>
 <link rel="stylesheet" href="../style.css"> 
+<style>
+
+.members-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.member-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+
+.member-info {
+    display: none;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 0.9em;
+    color: #444;
+}
+
+.member-info img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+.member-card.active .member-info {
+    display: block;
+}
+</style>
 </head>
 <body>
 <header>
     <div class="header-left">
         <div class="logo-placeholder">
-            <img src="../images/logo.png" alt="Once">
+            <img src="../images/logo.png" alt="Once Logo">
         </div>
         <h1>OnceVerse</h1>
     </div>
@@ -28,51 +75,123 @@
     
     <section class="members-grid-container">
         
+
         <div class="member-card">
             <h3>Nayeon</h3>
             <p style="font-size: 0.9em; color: #666;">Lead Vocalist, Lead Dancer</p>
+            <div class="member-info">
+                <img src="../images/members/nayeon.jpg" alt="Nayeon">
+                <p><strong>Full Name:</strong> Im Nayeon</p>
+                <p><strong>Birthday:</strong> September 22, 1995</p>
+                <p><strong>Nationality:</strong> South Korean</p>
+                <p>Debuted in 2015 with TWICE. Known for her bright vocals, stage presence, and energetic personality.</p>
+            </div>
         </div>
         
+
         <div class="member-card">
             <h3>Jeongyeon</h3>
             <p style="font-size: 0.9em; color: #666;">Lead Vocalist</p>
+            <div class="member-info">
+                <img src="../images/members/jeongyeon.jpg" alt="Jeongyeon">
+                <p><strong>Full Name:</strong> Yoo Jeongyeon</p>
+                <p><strong>Birthday:</strong> November 1, 1996</p>
+                <p><strong>Nationality:</strong> South Korean</p>
+                <p>Known for smooth vocals and chic visuals, playing a key role in group harmonies.</p>
+            </div>
         </div>
+
 
         <div class="member-card">
             <h3>Momo</h3>
             <p style="font-size: 0.9em; color: #666;">Main Dancer, Sub Vocalist</p>
+            <div class="member-info">
+                <img src="../images/members/momo.jpg" alt="Momo">
+                <p><strong>Full Name:</strong> Hirai Momo</p>
+                <p><strong>Birthday:</strong> November 9, 1996</p>
+                <p><strong>Nationality:</strong> Japanese</p>
+                <p>Renowned for incredible dancing skills and captivating stage performances.</p>
+            </div>
         </div>
+
 
         <div class="member-card">
             <h3>Sana</h3>
             <p style="font-size: 0.9em; color: #666;">Sub Vocalist</p>
+            <div class="member-info">
+                <img src="../images/members/sana.jpg" alt="Sana">
+                <p><strong>Full Name:</strong> Minatozaki Sana</p>
+                <p><strong>Birthday:</strong> December 29, 1996</p>
+                <p><strong>Nationality:</strong> Japanese</p>
+                <p>Famous for her charm, lively personality, and vocal contributions in TWICE songs.</p>
+            </div>
         </div>
+
 
         <div class="member-card">
             <h3>Jihyo</h3>
             <p style="font-size: 0.9em; color: #666;">Leader, Main Vocalist</p>
+            <div class="member-info">
+                <img src="../images/members/jihyo.jpg" alt="Jihyo">
+                <p><strong>Full Name:</strong> Park Jihyo</p>
+                <p><strong>Birthday:</strong> February 1, 1997</p>
+                <p><strong>Nationality:</strong> South Korean</p>
+                <p>Leader of TWICE with powerful vocals, known for her dedication and stage charisma.</p>
+            </div>
         </div>
+
 
         <div class="member-card">
             <h3>Mina</h3>
             <p style="font-size: 0.9em; color: #666;">Main Dancer, Sub Vocalist</p>
+            <div class="member-info">
+                <img src="../images/members/mina.jpg" alt="Mina">
+                <p><strong>Full Name:</strong> Myoui Mina</p>
+                <p><strong>Birthday:</strong> March 24, 1997</p>
+                <p><strong>Nationality:</strong> Japanese-American</p>
+                <p>Graceful dancer and elegant presence on stage; contributes sweet vocals.</p>
+            </div>
         </div>
+
 
         <div class="member-card">
             <h3>Dahyun</h3>
             <p style="font-size: 0.9em; color: #666;">Lead Rapper, Sub Vocalist</p>
+            <div class="member-info">
+                <img src="../images/members/dahyun.jpg" alt="Dahyun">
+                <p><strong>Full Name:</strong> Kim Dahyun</p>
+                <p><strong>Birthday:</strong> May 28, 1998</p>
+                <p><strong>Nationality:</strong> South Korean</p>
+                <p>Recognized for her witty rap lines and bright, energetic stage persona.</p>
+            </div>
         </div>
 
+ 
         <div class="member-card">
             <h3>Chaeyoung</h3>
             <p style="font-size: 0.9em; color: #666;">Main Rapper, Sub Vocalist</p>
+            <div class="member-info">
+                <img src="../images/members/chaeyoung.jpg" alt="Chaeyoung">
+                <p><strong>Full Name:</strong> Son Chaeyoung</p>
+                <p><strong>Birthday:</strong> April 23, 1999</p>
+                <p><strong>Nationality:</strong> South Korean</p>
+                <p>Creative rapper and songwriter with a unique style and charismatic performances.</p>
+            </div>
         </div>
+
 
         <div class="member-card">
             <h3>Tzuyu</h3>
             <p style="font-size: 0.9em; color: #666;">Lead Dancer, Sub Vocalist</p>
+            <div class="member-info">
+                <img src="../images/members/tzuyu.jpg" alt="Tzuyu">
+                <p><strong>Full Name:</strong> Chou Tzuyu</p>
+                <p><strong>Birthday:</strong> June 14, 1999</p>
+                <p><strong>Nationality:</strong> Taiwanese</p>
+                <p>Known for her elegant visuals and skilled dancing, the youngest member of TWICE.</p>
+            </div>
         </div>
-        
+
     </section>
 </main>
 
@@ -80,5 +199,22 @@
     <p class="footer-left">© 2025 OnceVerse</p>
     <p class="footer-right">Sources</p>
 </footer>
+
+<script>
+const memberCards = document.querySelectorAll('.member-card');
+
+memberCards.forEach(card => {
+    card.addEventListener('click', () => {
+
+        card.classList.toggle('active');
+
+        memberCards.forEach(otherCard => {
+            if (otherCard !== card) {
+                otherCard.classList.remove('active');
+            }
+        });
+    });
+});
+</script>
 </body>
 </html>

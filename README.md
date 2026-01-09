@@ -45,31 +45,6 @@ Whether you’re a long-time fan or just discovering TWICE, OnceVerse celebrates
 
 ---
 
-## ⚙️ JavaScript Integration
-
-JavaScript will be used on the **Discography** page for interactive album previews.
-
-When users hover or click on an album cover, it will:
-- Display the album name, release date, and tracklist dynamically.
-- Allow users to switch between albums without reloading the page.
-
-**Example Script:**
-```js
-const albums = {
-  'READY TO BE': ['SET ME FREE', 'MOONLIGHT SUNRISE', 'BLAME IT ON ME'],
-  'BETWEEN 1&2': ['Talk that Talk', 'Queen of Hearts', 'Basics']
-};
-
-function showAlbum(name) {
-  const trackList = albums[name];
-  let output = `<h3>${name}</h3><ul>`;
-  trackList.forEach(track => {
-    output += `<li>${track}</li>`;
-  });
-  output += '</ul>';
-  document.getElementById('albumInfo').innerHTML = output;
-}
-
 # 3rd Q Update
 
 ## Final Title
@@ -95,4 +70,31 @@ Upon submission, JavaScript processes and stores the input using `localStorage`.
 - The website includes at least six (6) fully functional pages  
 - The HTML form correctly collects and stores user input  
 - Stored data is successfully retrieved and used on at least two (2) webpages  
-- Interactive features function as intended without page reloads  
+- Interactive features function as intended without page reloads
+  
+___
+
+## ⚙️ JavaScript Integration
+
+JavaScript will be used on the **Discography** page for interactive album previews.
+
+When users hover or click on an album cover, it will:
+- Display the album name, release date, and tracklist dynamically.
+- Allow users to switch between albums without reloading the page.
+
+**Example Script:**
+```js
+const albums = {
+  'READY TO BE': ['SET ME FREE', 'MOONLIGHT SUNRISE', 'BLAME IT ON ME'],
+  'BETWEEN 1&2': ['Talk that Talk', 'Queen of Hearts', 'Basics']
+};
+
+function showAlbum(name) {
+  const trackList = albums[name];
+  let output = `<h3>${name}</h3><ul>`;
+  trackList.forEach(track => {
+    output += `<li>${track}</li>`;
+  });
+  output += '</ul>';
+  document.getElementById('albumInfo').innerHTML = output;
+}

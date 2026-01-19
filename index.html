@@ -1,64 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OnceVerse | TWICE Fan Hub</title>
-    <link rel="stylesheet" href="style.css"> 
-    <link rel="icon" type="image/png" href="images/logo1.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OnceVerse | TWICE Fan Sign-Up</title>
+<style>
+:root {
+    --pink: #ff5fa2;
+    --orange: #ff9933;
+    --white: #ffffff;
+}
+body {
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: linear-gradient(270deg, var(--pink), var(--orange), var(--white), var(--pink));
+    background-size: 800% 800%;
+    animation: gradientMove 20s ease infinite;
+}
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+form {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 22px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 500px;
+}
+fieldset {
+    border: none;
+    margin-bottom: 30px;
+}
+legend {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--pink);
+    margin-bottom: 18px;
+}
+label {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+    color: #444;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 6px;
+    border-radius: 14px;
+    border: 2px solid #f0f0f0;
+    font-size: 0.9rem;
+    background-color: #fffafc;
+    transition: all 0.25s ease;
+}
+input:focus, select:focus, textarea:focus {
+    border-color: var(--pink);
+    box-shadow: 0 0 0 4px rgba(255,95,162,0.25);
+    outline: none;
+}
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+    accent-color: var(--pink);
+}
+.buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+}
+input[type="submit"], input[type="reset"] {
+    flex: 1;
+    padding: 14px;
+    border-radius: 16px;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+input[type="submit"] {
+    background: linear-gradient(135deg, var(--pink), var(--orange));
+    color: var(--white);
+}
+input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255,95,162,0.4);
+}
+input[type="reset"] {
+    background-color: #f0f0f0;
+    color: #555;
+}
+input[type="reset"]:hover {
+    background-color: #e6e6e6;
+}
+.invalid {
+    border-color: #ff6b6b;
+    background-color: #fff1f1;
+}
+</style>
 </head>
 <body>
-    
-    <header>
-        <div class="header-left">
-            <div class="logo-placeholder">
-                <img src="images/logo.png" alt="Once">
-            </div>
-            <h1>OnceVerse</h1>
-        </div>
-        <nav class="header-nav">
-            <a href="index.html">Home</a>
-            <a href="public/about.html">About</a>
-            <a href="public/members.html">Members</a>
-            <a href="public/discography.html">Discography</a>
-            <a href="public/gallery.html">Gallery</a>
-        </nav>
-    </header>
+<form onsubmit="return confirmSubmit()" onreset="return confirmReset()">
+    <fieldset>
+        <legend>Account Info</legend>
+        <label>
+            Username
+            <input type="text" required onblur="validateInput(this)">
+        </label>
+        <label>
+            Email Address
+            <input type="email" required onblur="validateInput(this)">
+        </label>
+    </fieldset>
+    <fieldset>
+        <legend>TWICE Preferences</legend>
+        <label>
+            Favorite Member (Bias)
+            <select required>
+                <option value="">Select Member</option>
+                <option>Nayeon</option>
+                <option>Jeongyeon</option>
+                <option>Momo</option>
+                <option>Sana</option>
+                <option>Jihyo</option>
+                <option>Mina</option>
+                <option>Dahyun</option>
+                <option>Chaeyoung</option>
+                <option>Tzuyu</option>
+            </select>
+        </label>
+        <label>
+            Fan Type
+            <br>
+            <input type="radio" name="fanType" required> Casual Fan
+            <input type="radio" name="fanType"> ONCE
+        </label>
+        <label>
+            Favorite TWICE Concepts (Select all that apply)
+            <br>
+            <input type="checkbox"> Bright / Color-Pop  
+            <input type="checkbox"> Cute & Energetic  
+            <input type="checkbox"> Retro  
+            <input type="checkbox"> Elegant  
+            <input type="checkbox"> Girl Crush  
+            <input type="checkbox"> Sensual  
+        </label>
+    </fieldset>
+    <div class="buttons">
+        <input type="submit" value="Join ONCE">
+        <input type="reset" value="Reset">
+    </div>
+</form>
+<script>
+function confirmSubmit() {
+    if (confirm("Do you want to submit your fan membership?")) {
+        window.location.href = "../index.html";
+        return false; 
+    }
+    return false;
+}
 
-    <main>
-        <div class="main-left">
-            <h2>Welcome to the Universe of TWICE!</h2>
-            <h3>The global hub for every dedicated ONCE.</h3>
-
-           <div class="banner">
-               <img src="images/twice-banner.png" alt="TWICE Banner">
-           </div>
-
-            <p style="margin-top: 40px; line-height: 1.6;">
-                TWICE is a South Korean girl group formed by JYP Entertainment. The group is composed of nine members: Nayeon, Jeongyeon, Momo, Sana, Jihyo, Mina, Dahyun, Chaeyoung, and Tzuyu. Debuting in 2015, they have achieved global success, becoming known for their bright concepts, catchy music, and incredible stage presence.
-            </p>
-            <p style="line-height: 1.6;">
-                Use the navigation links above or the quick access buttons on the right to dive into their discography, meet the members, and explore their journey!
-            </p>
-        </div>
-        
-        <aside class="sidebar">
-            <a href="public/about.html" class="sidebar-btn">About TWICE</a>
-            <a href="public/members.html" class="sidebar-btn">View Members</a>
-            <a href="public/discography.html" class="sidebar-btn">Discography</a>
-            <a href="public/gallery.html" class="sidebar-btn">Gallery</a>
-        </aside>
-
-    </main>
-
-    <footer>
-        <p class="footer-left">© 2025 OnceVerse</p>
-        <p class="footer-right">All rights reserved to JYP Entertainment.</p>
-    </footer>
-    
+function confirmReset() {
+    return confirm("Do you want to reset all fields?");
+}
+function validateInput(element) {
+    if (element.value.trim() === "") {
+        element.classList.add("invalid");
+    } else {
+        element.classList.remove("invalid");
+    }
+}
+</script>
 </body>
 </html>
-
-
-
-

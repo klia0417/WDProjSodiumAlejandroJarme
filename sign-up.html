@@ -107,7 +107,7 @@ input[type="reset"]:hover {
 </style>
 </head>
 <body>
-<form onsubmit="return confirmSubmit()" onreset="return confirmReset()">
+<form id="signupForm">
     <fieldset>
         <legend>Account Info</legend>
         <label>
@@ -158,18 +158,8 @@ input[type="reset"]:hover {
         <input type="reset" value="Reset">
     </div>
 </form>
-<script>
-function confirmSubmit() {
-    if (confirm("Do you want to submit your fan membership?")) {
-        window.location.href = "../index.html";
-        return false; 
-    }
-    return false;
-}
 
-function confirmReset() {
-    return confirm("Do you want to reset all fields?");
-}
+<script>
 function validateInput(element) {
     if (element.value.trim() === "") {
         element.classList.add("invalid");
@@ -177,6 +167,20 @@ function validateInput(element) {
         element.classList.remove("invalid");
     }
 }
+
+// Redirect to homepage after signup
+document.getElementById('signupForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // prevent default form submission
+    if (confirm("Do you want to submit your fan membership?")) {
+        // Redirect to restored homepage
+        window.location.href = "index.html";
+    }
+});
+
+// Confirm reset
+document.querySelector('input[type="reset"]').addEventListener('click', function() {
+    return confirm("Do you want to reset all fields?");
+});
 </script>
 </body>
 </html>

@@ -364,15 +364,15 @@ footer {
     color: #fff;
     font-weight: bold;
     font-size: 1em; 
-    border-bottom: 3px solid #ffdfc7; /* keeps the border */
-    align-items: center; /* vertically centers text and links */
+    border-bottom: 3px solid #ffdfc7; 
+    align-items: center;
 }
 footer a {
     color: #fff;
     text-decoration: none;
 }
 footer a:hover {
-    text-decoration: underline; /* optional hover effect */
+    text-decoration: underline;
 }
 
 

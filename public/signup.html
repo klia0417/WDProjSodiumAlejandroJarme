@@ -160,8 +160,13 @@ input[type="reset"]:hover {
 </form>
 <script>
 function confirmSubmit() {
-    return confirm("Do you want to submit your fan membership?");
+    if (confirm("Do you want to submit your fan membership?")) {
+        window.location.href = "../index.html";
+        return false; 
+    }
+    return false;
 }
+
 function confirmReset() {
     return confirm("Do you want to reset all fields?");
 }

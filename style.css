@@ -357,14 +357,14 @@ main:not(:has(.sidebar)) {
 
 
 
-footer a {
-    color: #fff;         
-    text-decoration: none; 
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #ffdfc7;       
+footer { 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 20px 50px; 
+    background: #ff9933; 
+    color: #fff; 
+    font-weight: bold; 
+    font-size: 1em; 
 }
 
 

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Club/Organization Application</title>
+
+    <style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(135deg, #eef2f7, #dbe7ff);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form {
+        width: 100%;
+        max-width: 520px;
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    fieldset {
+        border: none;
+        margin-bottom: 25px;
+        padding: 0;
+    }
+
+    legend {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 16px;
+        font-size: 0.9rem;
+        color: #444;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px 12px;
+        margin-top: 6px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 0.9rem;
+        transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    /* focus effect */
+    input:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #4f7cff;
+        box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.2);
+        outline: none;
+    }
+
+    /* radio buttons spacing */
+    input[type="radio"] {
+        width: auto;
+        margin-right: 5px;
+        margin-left: 10px;
+    }
+
+    /* error style */
+    .invalid {
+        border-color: #e63946;
+        background-color: #fff1f1;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        width: 48%;
+        padding: 10px;
+        border-radius: 8px;
+        border: none;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    input[type="submit"] {
+        background-color: #4f7cff;
+        color: #ffffff;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #3b66e0;
+    }
+
+    input[type="reset"] {
+        background-color: #e0e0e0;
+    }
+
+    input[type="reset"]:hover {
+        background-color: #cfcfcf;
+    }
+    </style>
+
+    <script>
+        function confirmSubmit() {
+            return confirm("Do you want to submit your application?");
+        }
+
+        function confirmReset() {
+            return confirm("Do you want to reset all the information?");
+        }
+
+        function validateInput(element) {
+            if (element.value.trim() === "") {
+                element.classList.add("invalid");
+            } else {
+                element.classList.remove("invalid");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<form method="post" action="submit"
+      onsubmit="return confirmSubmit()"
+      onreset="return confirmReset()">
+
+    <fieldset>
+        <legend>Personal Information</legend>
+
+        <label>
+            Student ID
+            <input type="number" required onblur="validateInput(this)">
+        </label>
+
+        <label>
+            Full Name
+            <input type="text" required onblur="validateInput(this)">
+        </label>
+
+        <label>
+            Birthday
+            <input type="date" required>
+        </label>
+
+        <label>
+            Email Address
+            <input type="email" required onblur="validateInput(this)">
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Application Details</legend>
+
+        <label>
+            Mobile Phone
+            <input type="text" required onblur="validateInput(this)">
+        </label>
+
+        <label>
+            Grade Level
+            <select required>
+                <option value="">Select grade</option>
+                <option value="g7">Grade 7</option>
+                <option value="g8">Grade 8</option>
+                <option value="g9">Grade 9</option>
+                <option value="g10">Grade 10</option>
+                <option value="g11">Grade 11</option>
+                <option value="g12">Grade 12</option>
+            </select>
+        </label>
+
+        <label>
+            Intern / Extern
+            <br>
+            <input type="radio" name="type" value="int" required> Intern
+            <input type="radio" name="type" value="ext"> Extern
+        </label>
+
+        <label>
+            Preferred Organization / Club
+            <select required>
+                <option value="">Select club</option>
+                <option value="sci">Science Club</option>
+                <option value="tech">Tech Society</option>
+                <option value="arts">Arts Guild</option>
+                <option value="sports">Sports Club</option>
+                <option value="media">Media Team</option>
+            </select>
+        </label>
+
+        <label>
+            Why do you want to join?
+            <textarea rows="4" required onblur="validateInput(this)"></textarea>
+        </label>
+    </fieldset>
+
+    <div class="buttons">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </div>
+
+</form>
+
+</body>
+</html>

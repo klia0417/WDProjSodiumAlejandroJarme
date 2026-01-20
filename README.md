@@ -28,6 +28,9 @@ Whether you’re a long-time fan or just discovering TWICE, OnceVerse celebrates
 
 # TWICE Website Wireframes
 
+## Sign-up Page
+![Sign-up Page Wireframe](images/sign-up.png)
+
 ## Home Page
 ![Home Page Wireframe](images/home.png)
 

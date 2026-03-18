@@ -103,7 +103,8 @@ function showAlbum(name) {
   output += '</ul>';
   document.getElementById('albumInfo').innerHTML = output;
 }
-____
+
+___
 
 ### 1. This Project is for our classmates
 

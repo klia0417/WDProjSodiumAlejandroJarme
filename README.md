@@ -1,40 +1,11 @@
-#### Submitted by Keila Alejandro & Yuuna Jarme 
-#### on March 18, 2026 
-#### to Sir Roy
-#### in partial fulfillment of the requirements of CS3 of DOST-PSHS-MC 
-
 # FINAL MODIFICATION PROPOSAL
 
 ## 2. Website License Agreement
+Permission is granted to view, use, and share this website for educational and non-commercial purposes only.
 
-1. Grant of License
+You may not copy, modify, distribute, or use any part of this website for commercial gain without prior written consent.
 
-[Licensor Name] grants [Licensee Name] a non-exclusive, non-transferable license to use the website located at [Website URL] (“Website”) for [personal/business] purposes, subject to the terms of this Agreement.
-
-2. Restrictions
-
-The Licensee may not:
-
-Copy, modify, or distribute the Website’s content without written permission.
-Use the Website for unlawful purposes.
-Remove or alter copyright notices.
-3. Ownership
-
-All rights, title, and interest in the Website and its content remain the property of [Licensor Name].
-
-4. Termination
-
-This license terminates automatically if the Licensee breaches any term. Upon termination, the Licensee must cease all use of the Website.
-
-5. Governing Law
-
-This Agreement is governed by the laws of [Jurisdiction].
-
-Signed:
-
-[Licensor Name & Date]
-
-[Licensee Name & Date]
+This website is provided "as is", without warranties of any kind. The creator is not responsible for any damages arising from its use.
 
 
 # 💫 OnceVerse
@@ -140,3 +111,8 @@ function showAlbum(name) {
   output += '</ul>';
   document.getElementById('albumInfo').innerHTML = output;
 }
+
+#### Submitted by Keila Alejandro & Yuuna Jarme 
+#### on March 18, 2026 
+#### to Sir Roy
+#### in partial fulfillment of the requirements of CS3 of DOST-PSHS-MC 

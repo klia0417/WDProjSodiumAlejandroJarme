@@ -77,18 +77,18 @@ Upon submission, JavaScript processes and stores the input using `localStorage`.
 - Stored data is successfully retrieved and used on at least two (2) webpages  
 - Interactive features function as intended without page reloads
 
-  ### 1. This Project is for our classmates
+## 1. This Project is for our classmates
 
-### 2. Reason 
+## 2. Reason 
 They will love this project because it offers a well-organized and accessible way to explore everything about the group, from member profiles to their discography, making it especially helpful for new fans who want to learn more without feeling overwhelmed. In addition, the interactive and personalized features, such as the sign-up form, fan dashboard, and dynamic album previews, create a more engaging experience where users can actively interact with the content instead of just viewing it. At the same time, longtime ONCEs will appreciate how the website highlights TWICE’s milestones, achievements, and musical journey, allowing them to relive memorable moments and deepen their connection to the group.
 
-### 3. This Project Includes:
+## 3. This Project Includes:
  - Log-in / Sign-up Page
 
-### 4. This Project does not include:
+## 4. This Project does not include:
  - CRUD
 
-### 5. Website License Agreement
+## 5. Website License Agreement
 Permission is granted to view, use, and share this website for educational and non-commercial purposes only.
 
 You may not copy, modify, distribute, or use any part of this website for commercial gain without prior written consent.

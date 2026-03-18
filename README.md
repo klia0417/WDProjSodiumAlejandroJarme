@@ -1,4 +1,4 @@
-#### submitted by Keila Alejandro & Yuuna Jarme 
+#### Submitted by Keila Alejandro & Yuuna Jarme 
 #### on March 18, 2026 
 #### to Sir Roy
 #### in partial fulfillment of the requirements of CS3 of DOST-PSHS-MC 

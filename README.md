@@ -1,7 +1,7 @@
 #### Submitted By Keila Alejandro & Yuuna Jarme 
 #### on March 18, 2026 
 #### to Sir Roy
-##### in partial fulfillment of the requirements of CS3 of DOST-PSHS-MC 
+#### in partial fulfillment of the requirements of CS3 of DOST-PSHS-MC 
 
 # 💫 OnceVerse
 ### "Your ultimate guide to TWICE"

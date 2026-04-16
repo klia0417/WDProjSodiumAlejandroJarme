@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Music Player</title>
+</head>
+<body>
+  <audio id="bg-music" autoplay loop>
+    <source src="track1.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const audio = document.getElementById("bg-music");
+    audio.volume = 0; // start silent
+
+    // Fade in function
+    function fadeIn() {
+      let fade = setInterval(() => {
+        if (audio.volume < 1) {
+          audio.volume = Math.min(audio.volume + 0.01, 1);
+        } else {
+          clearInterval(fade);
+        }
+      }, 100);
+    }
+
+    // Fade out function
+    function fadeOut(callback) {
+      let fade = setInterval(() => {
+        if (audio.volume > 0) {
+          audio.volume = Math.max(audio.volume - 0.01, 0);
+        } else {
+          clearInterval(fade);
+          if (callback) callback();
+        }
+      }, 100);
+    }
+
+    // Change track with fade effect
+    function changeTrack(newSrc) {
+      fadeOut(() => {
+        audio.src = newSrc;
+        audio.play();
+        fadeIn();
+      });
+    }
+
+    // Start initial fade in
+    fadeIn();
+
+    // Listen for messages from main site to change track
+    window.addEventListener("message", (event) => {
+      if (event.data.type === "changeTrack") {
+        changeTrack(event.data.src);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -90,7 +90,7 @@
 
 <div class="about-info-box quiz-section">
     <h2>Test Your Knowledge</h2>
-    <button onclick="startQuiz()">Mini Quiz About TWICE</button>
+    <button class="quiz-btn" onclick="startQuiz()">Mini Quiz About TWICE</button>
 </div>
 
 <script>
@@ -98,6 +98,29 @@ function startQuiz() {
   window.location.href = "quiz.html";
 }
 </script>
+
+<style>
+/* Quiz button styling */
+.quiz-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(135deg, #ff99cc, #ff4d6d);
+    color: #fff;
+    box-shadow: 0 5px 12px rgba(255, 77, 109, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+.quiz-btn:hover {
+    background: linear-gradient(135deg, #ff4d6d, #ff9933);
+    transform: translateY(-3px);
+}
+</style>
+
 
 
 <footer>

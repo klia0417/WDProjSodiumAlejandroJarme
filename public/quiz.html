@@ -37,6 +37,9 @@
             <button type="button" class="quiz-submit" onclick="checkAnswers()">Submit Answers</button>
         </form>
         <p id="quizResult" style="font-weight:bold; margin-top:10px;"></p>
+
+        <!-- Back button -->
+        <button class="back-btn" onclick="goBack()">Back to About Page</button>
     </div>
 </div>
 
@@ -59,6 +62,10 @@ function checkAnswers() {
 
     document.getElementById("quizResult").innerText = 
         "You scored " + score + " out of 6!";
+}
+
+function goBack() {
+    window.location.href = "about.html"; // Adjust path if needed
 }
 </script>
 
@@ -91,6 +98,20 @@ function checkAnswers() {
     background-color: #3e8e41;
 }
 
+.back-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.back-btn:hover {
+    background-color: #0056b3;
+}
+
 #quiz {
     background-color: #fff8fb;
     border: 2px solid #ff5fa2;
@@ -99,3 +120,4 @@ function checkAnswers() {
     font-family: Arial, sans-serif;
 }
 </style>
+

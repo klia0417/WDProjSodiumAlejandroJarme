@@ -1,6 +1,6 @@
 <div class="about-info-box quiz-section">
     <h2>Test Your Knowledge</h2>
-    <button onclick="toggleQuiz()">Mini Quiz About TWICE</button>
+    <button class="quiz-btn" onclick="toggleQuiz()">Mini Quiz About TWICE</button>
     
     <div id="quiz" style="display:none; margin-top:15px;">
         <form id="twiceQuiz">
@@ -19,7 +19,22 @@
             <label><input type="radio" name="q3" value="Nayeon"> Nayeon</label><br>
             <label><input type="radio" name="q3" value="Tzuyu"> Tzuyu</label><br>
 
-            <button type="button" onclick="checkAnswers()">Submit Answers</button>
+            <p>4. What is TWICE’s official light stick called?</p>
+            <label><input type="radio" name="q4" value="Candy Bong"> Candy Bong</label><br>
+            <label><input type="radio" name="q4" value="Moonlight Stick"> Moonlight Stick</label><br>
+            <label><input type="radio" name="q4" value="Heart Bong"> Heart Bong</label><br>
+
+            <p>5. Which song became their breakout hit in 2016?</p>
+            <label><input type="radio" name="q5" value="Cheer Up"> Cheer Up</label><br>
+            <label><input type="radio" name="q5" value="TT"> TT</label><br>
+            <label><input type="radio" name="q5" value="Knock Knock"> Knock Knock</label><br>
+
+            <p>6. Which member is the youngest (maknae)?</p>
+            <label><input type="radio" name="q6" value="Tzuyu"> Tzuyu</label><br>
+            <label><input type="radio" name="q6" value="Mina"> Mina</label><br>
+            <label><input type="radio" name="q6" value="Chaeyoung"> Chaeyoung</label><br>
+
+            <button type="button" class="quiz-submit" onclick="checkAnswers()">Submit Answers</button>
         </form>
         <p id="quizResult" style="font-weight:bold; margin-top:10px;"></p>
     </div>
@@ -38,9 +53,49 @@ function checkAnswers() {
     if (form["q1"].value === "2015") score++;
     if (form["q2"].value === "ONCE") score++;
     if (form["q3"].value === "Jihyo") score++;
+    if (form["q4"].value === "Candy Bong") score++;
+    if (form["q5"].value === "Cheer Up") score++;
+    if (form["q6"].value === "Tzuyu") score++;
 
     document.getElementById("quizResult").innerText = 
-        "You scored " + score + " out of 3!";
+        "You scored " + score + " out of 6!";
 }
 </script>
 
+<style>
+.quiz-btn {
+    background-color: #ff5fa2;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.quiz-btn:hover {
+    background-color: #e14d8d;
+}
+
+.quiz-submit {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.quiz-submit:hover {
+    background-color: #3e8e41;
+}
+
+#quiz {
+    background-color: #fff8fb;
+    border: 2px solid #ff5fa2;
+    border-radius: 8px;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+}
+</style>

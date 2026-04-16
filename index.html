@@ -184,5 +184,13 @@ document.querySelector('input[type="reset"]').addEventListener('click', function
     return confirm("Do you want to reset all fields?");
 });
 </script>
+
+<script>
+  function setTrack(trackFile) {
+    const musicFrame = window.frames["musicFrame"];
+    musicFrame.postMessage({ type: "changeTrack", src: trackFile }, "*");
+  }
+</script>
+
 </body>
 </html>

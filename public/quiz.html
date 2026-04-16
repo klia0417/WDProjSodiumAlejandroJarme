@@ -1,1 +1,46 @@
+<div class="about-info-box quiz-section">
+    <h2>Test Your Knowledge</h2>
+    <button onclick="toggleQuiz()">Mini Quiz About TWICE</button>
+    
+    <div id="quiz" style="display:none; margin-top:15px;">
+        <form id="twiceQuiz">
+            <p>1. What year did TWICE debut?</p>
+            <label><input type="radio" name="q1" value="2014"> 2014</label><br>
+            <label><input type="radio" name="q1" value="2015"> 2015</label><br>
+            <label><input type="radio" name="q1" value="2016"> 2016</label><br>
+
+            <p>2. What is TWICE’s fandom name?</p>
+            <label><input type="radio" name="q2" value="ONCE"> ONCE</label><br>
+            <label><input type="radio" name="q2" value="Blink"> Blink</label><br>
+            <label><input type="radio" name="q2" value="Army"> Army</label><br>
+
+            <p>3. Which member is the leader of TWICE?</p>
+            <label><input type="radio" name="q3" value="Jihyo"> Jihyo</label><br>
+            <label><input type="radio" name="q3" value="Nayeon"> Nayeon</label><br>
+            <label><input type="radio" name="q3" value="Tzuyu"> Tzuyu</label><br>
+
+            <button type="button" onclick="checkAnswers()">Submit Answers</button>
+        </form>
+        <p id="quizResult" style="font-weight:bold; margin-top:10px;"></p>
+    </div>
+</div>
+
+<script>
+function toggleQuiz() {
+    const quiz = document.getElementById("quiz");
+    quiz.style.display = quiz.style.display === "none" ? "block" : "none";
+}
+
+function checkAnswers() {
+    let score = 0;
+    const form = document.forms["twiceQuiz"];
+
+    if (form["q1"].value === "2015") score++;
+    if (form["q2"].value === "ONCE") score++;
+    if (form["q3"].value === "Jihyo") score++;
+
+    document.getElementById("quizResult").innerText = 
+        "You scored " + score + " out of 3!";
+}
+</script>
 

@@ -1,123 +1,227 @@
-<div class="about-info-box quiz-section">
-    <h2>Test Your Knowledge</h2>
-    <button class="quiz-btn" onclick="toggleQuiz()">Mini Quiz About TWICE</button>
-    
-    <div id="quiz" style="display:none; margin-top:15px;">
-        <form id="twiceQuiz">
-            <p>1. What year did TWICE debut?</p>
-            <label><input type="radio" name="q1" value="2014"> 2014</label><br>
-            <label><input type="radio" name="q1" value="2015"> 2015</label><br>
-            <label><input type="radio" name="q1" value="2016"> 2016</label><br>
-
-            <p>2. What is TWICE’s fandom name?</p>
-            <label><input type="radio" name="q2" value="ONCE"> ONCE</label><br>
-            <label><input type="radio" name="q2" value="Blink"> Blink</label><br>
-            <label><input type="radio" name="q2" value="Army"> Army</label><br>
-
-            <p>3. Which member is the leader of TWICE?</p>
-            <label><input type="radio" name="q3" value="Jihyo"> Jihyo</label><br>
-            <label><input type="radio" name="q3" value="Nayeon"> Nayeon</label><br>
-            <label><input type="radio" name="q3" value="Tzuyu"> Tzuyu</label><br>
-
-            <p>4. What is TWICE’s official light stick called?</p>
-            <label><input type="radio" name="q4" value="Candy Bong"> Candy Bong</label><br>
-            <label><input type="radio" name="q4" value="Moonlight Stick"> Moonlight Stick</label><br>
-            <label><input type="radio" name="q4" value="Heart Bong"> Heart Bong</label><br>
-
-            <p>5. Which song became their breakout hit in 2016?</p>
-            <label><input type="radio" name="q5" value="Cheer Up"> Cheer Up</label><br>
-            <label><input type="radio" name="q5" value="TT"> TT</label><br>
-            <label><input type="radio" name="q5" value="Knock Knock"> Knock Knock</label><br>
-
-            <p>6. Which member is the youngest (maknae)?</p>
-            <label><input type="radio" name="q6" value="Tzuyu"> Tzuyu</label><br>
-            <label><input type="radio" name="q6" value="Mina"> Mina</label><br>
-            <label><input type="radio" name="q6" value="Chaeyoung"> Chaeyoung</label><br>
-
-            <button type="button" class="quiz-submit" onclick="checkAnswers()">Submit Answers</button>
-        </form>
-        <p id="quizResult" style="font-weight:bold; margin-top:10px;"></p>
-
-        <!-- Back button -->
-        <button class="back-btn" onclick="goBack()">Back to About Page</button>
-    </div>
-</div>
-
-<script>
-function toggleQuiz() {
-    const quiz = document.getElementById("quiz");
-    quiz.style.display = quiz.style.display === "none" ? "block" : "none";
-}
-
-function checkAnswers() {
-    let score = 0;
-    const form = document.forms["twiceQuiz"];
-
-    if (form["q1"].value === "2015") score++;
-    if (form["q2"].value === "ONCE") score++;
-    if (form["q3"].value === "Jihyo") score++;
-    if (form["q4"].value === "Candy Bong") score++;
-    if (form["q5"].value === "Cheer Up") score++;
-    if (form["q6"].value === "Tzuyu") score++;
-
-    document.getElementById("quizResult").innerText = 
-        "You scored " + score + " out of 6!";
-}
-
-function goBack() {
-    window.location.href = "about.html"; // Adjust path if needed
-}
-</script>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OnceVerse | TWICE Quiz</title>
 <style>
-.quiz-btn {
-    background-color: #ff5fa2;
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    font-size: 16px;
-    border-radius: 6px;
+/* Base styling copied from your site */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fffafa; 
+    color: #333;
+    font-size: 1.1em; 
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px; 
+    background: linear-gradient(90deg, #ffc7d6, #ffdfc7); 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.header-left {
+    display: flex;
+    align-items: center;
+}
+.logo-placeholder {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff99cc, #ff4d6d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px; 
+    box-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
+}
+.logo-placeholder img {
+    width: 70px;
+    height: 70px;
+    filter: brightness(2);
+    object-fit: contain;
+}
+header h1 {
+    margin: 0;
+    color: #880e4f; 
+    font-size: 3em; 
+    letter-spacing: 1px;
+}
+.header-nav a {
+    margin-left: 30px; 
+    text-decoration: none;
+    color: #ff4d6d; 
+    font-weight: bold;
+    font-size: 1.2em; 
+    transition: all 0.3s ease;
+}
+.header-nav a:hover {
+    color: #ff9933; 
+    text-shadow: 1px 1px 3px rgba(255, 77, 109, 0.5);
+}
+
+/* Quiz container */
+.quiz-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: #fff; 
+    box-shadow: 0 6px 15px rgba(255, 77, 109, 0.2);
+}
+.quiz-section h2 {
+    color: #880e4f;
+    font-size: 2em;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ffdfc7;
+}
+
+/* Buttons */
+.quiz-btn, .quiz-submit, .back-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    margin-right: 10px;
+    border: none;
+}
+
+/* Toggle quiz button */
+.quiz-btn {
+    background: linear-gradient(135deg, #ff99cc, #ff4d6d);
+    color: #fff;
+    box-shadow: 0 5px 12px rgba(255, 77, 109, 0.3);
 }
 .quiz-btn:hover {
-    background-color: #e14d8d;
+    background: linear-gradient(135deg, #ff4d6d, #ff9933);
+    transform: translateY(-3px);
 }
 
+/* Submit button */
 .quiz-submit {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 8px 14px;
-    font-size: 15px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 10px;
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    color: #fff;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
 }
 .quiz-submit:hover {
-    background-color: #3e8e41;
+    background: linear-gradient(135deg, #2e7d32, #4caf50);
+    transform: translateY(-3px);
 }
 
+/* Back button */
 .back-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 14px;
-    font-size: 15px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 15px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.25);
 }
 .back-btn:hover {
-    background-color: #0056b3;
+    background: linear-gradient(135deg, #0056b3, #007bff);
+    transform: translateY(-3px);
 }
 
+/* Quiz inner box */
 #quiz {
-    background-color: #fff8fb;
-    border: 2px solid #ff5fa2;
-    border-radius: 8px;
-    padding: 15px;
-    font-family: Arial, sans-serif;
+    background: #fffafa;
+    border: 3px solid #ffdfc7;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 6px 15px rgba(255, 77, 109, 0.2);
+}
+#quiz p {
+    font-weight: bold;
+    color: #880e4f;
+}
+#quiz label {
+    display: block;
+    margin: 5px 0;
+    font-size: 0.95em;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px; 
+    background: #ff9933; 
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em; 
+    border-bottom: 3px solid #ffdfc7; 
+    align-items: center;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
 }
 </style>
+</head>
+<body>
 
+<header>
+    <div class="header-left">
+        <div class="logo-placeholder">
+            <img src="../images/logo.png" alt="Once">
+        </div>
+        <h1>OnceVerse</h1>
+    </div>
+    <nav class="header-nav">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="members.html">Members</a>
+        <a href="discography.html">Discography</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+</header>
+
+<main>
+    <section class="quiz-section">
+        <h2>Mini Quiz About TWICE</h2>
+        <button class="quiz-btn" onclick="toggleQuiz()">Start Quiz</button>
+        
+        <div id="quiz" style="display:none;">
+            <form id="twiceQuiz">
+                <p>1. What year did TWICE debut?</p>
+                <label><input type="radio" name="q1" value="2014"> 2014</label>
+                <label><input type="radio" name="q1" value="2015"> 2015</label>
+                <label><input type="radio" name="q1" value="2016"> 2016</label>
+
+                <p>2. What is TWICE’s fandom name?</p>
+                <label><input type="radio" name="q2" value="ONCE"> ONCE</label>
+                <label><input type="radio" name="q2" value="Blink"> Blink</label>
+                <label><input type="radio" name="q2" value="Army"> Army</label>
+
+                <p>3. Which member is the leader of TWICE?</p>
+                <label><input type="radio" name="q3" value="Jihyo"> Jihyo</label>
+                <label><input type="radio" name="q3" value="Nayeon"> Nayeon</label>
+                <label><input type="radio" name="q3" value="Tzuyu"> Tzuyu</label>
+
+                <p>4. What is TWICE’s official light stick called?</p>
+                <label><input type="radio" name="q4" value="Candy Bong"> Candy Bong</label>
+                <label><input type="radio" name="q4" value="Moonlight Stick"> Moonlight Stick</label>
+                <label><input type="radio" name="q4" value="Heart Bong"> Heart Bong</label>
+
+                <p>5. Which song became their breakout hit in 2016?</p>
+                <label><input type="radio" name="q5" value="Cheer Up"> Cheer Up</label>
+                <label><input type="radio" name="q5" value="TT"> TT</label>
+                <label><input type="radio" name="q5" value="Knock Knock"> Knock Knock</label>
+
+                <p>6. Which member is the youngest (maknae)?</p>
+                <label><input type="radio" name="q6" value="Tzuyu"> Tzuyu</label>
+                <label><input type="radio" name="q6" value="Mina"> Mina</label>
+                <label><input type="radio" name="q6" value="Chaeyoung"> Chaeyoung</label>
+
+                <button type="
